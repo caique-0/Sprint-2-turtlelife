@@ -105,11 +105,13 @@ var context = document.getElementById("chart").getContext("2d");
 				listTemp = obj.data.slice(_lastIndexTemp);
 	
 				listTemp.forEach(data => {
-					//Máximo de 60 itens exibidos no gráfico
+                    //Máximo de 60 itens exibidos no gráfico
+                    // Essa parte do if mostra que quando chega a 10 dados, ele renova as informações
 					if (chart.data.labels.length == 10 && chart.data.datasets[0].data.length == 10){
                         chart.data.labels.shift();
-                    // Ao chegar a 10 ele renova os dados, cada um deles representa cada linha
-
+                    
+      
+                        //Cada chart representa uma linha
 						chart.data.datasets[0].data.shift();
 						chart.data.datasets[1].data.shift();
 					}
@@ -117,16 +119,22 @@ var context = document.getElementById("chart").getContext("2d");
                     chart.data.labels.push(this.time++);
                     /*
                     Essa parte coloca os dados no gráfico.
+                    O +8 do lado do 2 chart significa que o segundo está intercalando 8 números
+                    a mais do que o primeiro.
                     Sendo: chart.data.datasets[0].data.push(parseFloat(data)); Os dados da 
                     primeira linha
                     E
                     chart.data.datasets[1].data.push(parseFloat(data)+2.0); Os da segunda.
                     */
+                    var n_aleatorios = Math.random() * (8 - 6) + 6;
+                    /* Essa variável n_aleatorios roda (max-min) + max gerando números
+                    aleatórios que criem uma forma mais diferenciada entre os gráficos, intercalando 
+                    entre os números possíveis entre os dois valores */
 					chart.data.datasets[0].data.push(parseFloat(data));
-					chart.data.datasets[1].data.push(parseFloat(data)+5);
+					chart.data.datasets[1].data.push(parseFloat(data)+n_aleatorios);
 					chart.update();
 				});
-				
+				// Esses dois comentários não são necessários no gráfico, então não precisa mexer nela.
 				// document.getElementById('average').textContent = obj.average;
 				// document.getElementById('averageHour').textContent = obj.averageHour;
 			} 
