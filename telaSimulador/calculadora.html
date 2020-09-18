@@ -19,12 +19,12 @@
                     pensar em como afetam diretamente ou indiretamente nossa rotina ou empresa.</p>
                     <p class="textoMedio">Você é uma:</p><br />
                     <div style="text-align: center;">
-						<button onclick="scrollToElement('instituicao')" class="btnInstituicao">Instituição</button>
-                    	<button onclick="scrollToElement('pesca')" class="btnPesca">Empresa de Pesca</button>
+						<button onclick="instituicao()" class="btnInstituicao">Instituição</button>
+                    	<button onclick="pesca()" class="btnPesca">Empresa de Pesca</button>
 					</div>
                 
                 <br/><hr><br/>
-					<a name="instituicao"></a>
+					
                     <p class="textoEscuro">Como Instituto de preservação da vida animal, sugerimos que faça abaixo uma simulação para calcular
                     a porcentagem de machos e fêmeas que podem nascer de acordo com a quantidade de ovos na incubação. Assim
                     poderá ter uma noção de como é possível ter controle dos sexos de ovos incubados!</p><br>
@@ -40,7 +40,7 @@
                         <div id="um" class="textoMedio"></div> <br/>
                     </div>
                 <hr><br>
-					<a name="pesca"></a>
+					
                     <p class="textoEscuro">Você sabia que as empresas de Pesca serão uma das principais afetadas na extinção de tartarugas?
                     Isso porque elas são predadoras das águas-vivas (as águas-vivas são predadoras dos peixes), sem elas a escassez de peixes
                     logo chegaria pois aumentaria drasticamente a quantidade de águas-vivas no oceano. Automaticamente sua empresa seria afetada
@@ -69,8 +69,8 @@
         var fem = ((femea.value / total.value) * 100);
         var mac = ((macho.value / total.value) * 100);
 
-        um.innerHTML = (`<br>A porcentagem de fêmeas é igual a: ${fem.toFixed(1)}%`);
-        um.innerHTML += (`<br>A porcentagem de macho é igual a: ${mac.toFixed(1)}%`);
+        um.innerHTML = (`<br>A porcentagem de fêmeas é igual a: ${fem}%`);
+        um.innerHTML += (`<br>A porcentagem de macho é igual a: ${mac}%`);
     }
 
     function calcular(){
@@ -78,16 +78,8 @@
         var prejuizo = (0.4 * rendaMensal.value);
         var lucro = (0.3 * rendaMensal.value);
 
-        div_femea.innerHTML = (`Seu <strong>lucro</strong> mensal, caso invista na preservação de tartarugas, a longo prazo será de: R$ ${lucro.toFixed(2).replace("." , ",")}`);
-        div_macho.innerHTML += (`<br>Seu <strong>prejuízo</strong> mensal, caso não invista na preservação de tartarugas, a longo prazo será de: R$ ${prejuizo.toFixed(2).replace("." , ",")}`);
+        div_femea.innerHTML = (`Seu <strong>lucro</strong> mensal, caso invista na preservação de tartarugas, a longo prazo será de: R$ ${lucro}`);
+        div_macho.innerHTML += (`<br>Seu <strong>prejuízo</strong> mensal, caso não invista na preservação de tartarugas, a longo prazo será de: R$ ${prejuizo}`);
     }
 	
-	/* Rola a página para uma âncora na página;
-	parametro breakpoint é o atributo "name" da âncora alvo
-	*/
-	function scrollToElement(breakpoint) {
-		var target = document.querySelector(`a[name="${breakpoint}"]`); // Encontra a âncora na página e armazena.
-		if (!target) { return; } // Caso a âncora não seja encontrada, interrompe o fluxo.
-		target.scrollIntoView({ behavior: 'smooth'}); // Rola a página de maneira "animada".
-	}
 </script>
