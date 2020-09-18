@@ -1,0 +1,121 @@
+/*  */
+html, body {
+	height: 100%; /*  */
+}
+
+/*Em body, coloquei toda a estilização que vai servir pro documento inteiro, por exemplo a fonte da letra. */
+body{
+    font-family: "Open Sans", sans-serif; /* fonte da letra */
+	margin: 0;
+}
+
+/* Em btnInstituicao está ta a estilização do Botão "Instituição" */
+.btnInstituicao{
+    background-color: #1EC1C4; /* cor de fundo do botão */
+    color: #F2EBEB; /* cor da letra dentro do botão */
+    font-size: 15px; /* tamanho da letra dentro do botão */
+    text-align: center; /* posição da palavra dentro do botão */
+    padding: 17px; /* tamanho do preenchimento do botão pra cima e pra baixo */
+    padding-right: 30px; /* preenchimento a direita do botão */
+    padding-left: 30px; /* preenchimento a esquerda do botão */
+    border-radius: 10px; /* para arredondar as bordas do botão */
+    
+}
+
+/* Em btnPesca está ta a estilização do Botão "Empresa de Pesca", são os mesmos parametros do botão acima */
+.btnPesca{
+    background-color: #3DCFAB;
+    color: #F2EBEB;
+    font-size: 15px;
+    text-align: center;
+    padding: 17px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 10px;  
+}
+
+/* Em btnSimular está ta a estilização do Botão "Simular", são os mesmos parametros do botão acima */
+.btnSimular{
+    background-color: #1EC1C4;
+    text-align: center;
+    color: #F2EBEB;
+    font-size: 15px;
+    padding: 8px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 10px;
+}
+
+/* Em btnCalcular está ta a estilização do Botão "Calcular", são os mesmos parametros do botão acima */
+.btnCalcular{
+    background-color: #3DCFAB;
+    text-align: center;
+    color: #F2EBEB;
+    font-size: 15px;
+    padding: 8px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 10px;
+}
+
+/* Em labelAmbiental é a estilização dos campos de Input da simulação dos Institutos */
+.labelAmbiental{
+    background-color: #E3E3E3; /* cor de fundo do botão */
+    width: 310px; /* largura do campo */
+    padding: 8px; /* preenchimento do campo pra cima e pra baixo */
+}
+
+/* Em labelPesca é a estilização do campo de Input da simulação da Empresa de Pesca, são os mesmos parametros do de cima */
+.labelPesca{
+    background-color: #E3E3E3;
+    width: 180px;
+    padding: 8px;
+}
+
+/* Em titleCal eu estilizei o título h2 "Calculadora de Impacto" da página */
+.titleCal{
+    font-size: 25px; /* tamanho da fonte do texto */
+    color: #404040; /* cor do texto */
+    text-align: center; /* text-align é para alinhar o texto, aqui eu centralizei */
+}
+
+/* Em textoEscuro estilizei onde eu queria uma cor mais escura nos textos */
+.textoEscuro{
+    color: #404040; /* cor do texto */
+    text-align: center; /* text-align é para alinhar o texto, aqui eu centralizei */
+    font-size: 17px; /* tamanho da fonte do texto */
+}
+
+/* Em textoMedio estilizei onde eu queria uma cor mais média nos textos, são os mesmo parametros de cima */
+.textoMedio{
+    color: #6C6C6C;
+    font-size: 17px;
+    text-align: center;
+}
+
+/* Em container  */
+.container{
+    width: 100%; /*  */
+	display: flex; /* Display flex é bem parecido com display table, mas possui alguns outros recursos e é mais usado para elementos estruturais. É capaz de organizar espacialmente os elementos em uma interface, além de possuir capacidades avançadas de alinhamento */
+	flex-direction: row /* Define que os elementos filhos serão orientados como células em uma linha, ficando lado-a-lado como colunas */
+}
+
+/* Em duas-colunas eu estilizei as divs que queria alinhar lado a lado, no caso a imagem a esquerda e os textos a direita */
+.duas-colunas{
+	width: 50%;
+}
+
+/* Em content */
+.content {
+	padding: 30px; /* Enchimento para distanciar o conteúdo dos elementos envolta.  */
+}
+
+/* Em turtle-image eu estilizei a div e a imagem que queria na coluna esquerda da página */
+.turtle-image {
+	height: 100vh; /* 100% da altura da janela (view height)  */
+	position: sticky; /* Position sticky determina que o elemento vai ter comportamento relativo à posição da janela */
+	top: 0; /* Distância do topo do elemento pai (ou da janela, por causa do position sticky) */
+    background: url("tartarugaCal.jpeg") no-repeat center top; /* Imagem de fundo que não se repete, alinhada ao centro no eixo X e ao topo no eixo Y */
+	background-position: cover; /* Sempre preenche todo o fundo do elemento  */
+}
+
