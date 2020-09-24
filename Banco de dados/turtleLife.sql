@@ -47,8 +47,8 @@ cpfCartao varchar(11),
 cnpjCartao varchar(40),
 validadeCartao varchar(8),
 cvcCartao int,
-idDadosPj int,
-constraint pk_pagamentos_dadosPj foreign key (idDadosPj) references dadosPj (idDadosPj)
+constraint pk_pagamentos_dadosPj foreign key (idDadosPj) references dadosPj (idDadosPj),
+idDadosPj int
 );
 
     
@@ -72,8 +72,8 @@ numPedido int primary key auto_increment,
 idCliente int, 
 nomeCliente varchar(40),
 sexoPreferencia varchar(40),
-idCiclo int,
-constraint fk_cliente_periodoInc  FOREIGN KEY (idCiclo) REFERENCES periodoInc (idCiclo)
+constraint fk_cliente_periodoInc  FOREIGN KEY (idCiclo) REFERENCES periodoInc (idCiclo),
+idCiclo int
  );
  
 insert into cliente (idCliente,nomeCliente,sexoPreferencia,idCiclo) values
