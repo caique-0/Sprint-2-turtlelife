@@ -1,8 +1,9 @@
+//função que delimita os limites da linha 1
 function lm35(min, max) {
-    min = typeof min == 'undefined' ? 24 : min;
-    max = typeof max == 'undefined' ? 25 : max;
+    min = typeof min == 'undefined' ? 22 : min; //minimo
+    max = typeof max == 'undefined' ? 24 : max; //maximo
     
-    let random = Math.random() * (max - min) + min;
+    let random = Math.random() * (max - min) + min; //equação que manda as médias pro controller
 
     return random
 

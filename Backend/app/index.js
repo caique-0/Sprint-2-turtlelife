@@ -5,7 +5,7 @@ const sensors = require('./sensors.js')
 Exemplo atribuindo valores diferentes de minimo 15 e máximo 18
 temperatura = sensors.lm35(15,18)
 Os valores padrões de temperatura são min: 18 max: 25*/
-temperatura = sensors.lm35(24,25)
+temperatura = sensors.lm35(22,24)
 
 
 /*Utilizando a função console.log() para exibir no terminal o retorno da função,
