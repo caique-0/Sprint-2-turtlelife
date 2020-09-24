@@ -1,5 +1,6 @@
 create database bdturtleLife;
 use bdturtleLife;
+drop database bdturtleLife;
 
 create table tbPessoaf (
 idPessoaf int primary key auto_increment,
@@ -48,17 +49,23 @@ insert into periodoIncubacao (idCiclo, descPeriodo, primeiroD, primeiroT, segund
 
 create table cliente (
 idCliente int primary key auto_increment,
-numPedido int,
 nomeCliente varchar(40),
 sexoPreferencia varchar(40),
 idCiclo int,
 constraint fk_cliente_periodoIncubacao  FOREIGN KEY (idCiclo) REFERENCES periodoIncubacao (idCiclo)
  );
  
-insert into cliente (idCliente,numPedido,nomeCliente,sexoPreferencia,idCiclo)
-	values	(110, '01', 'Projeto tamar', 'macho', 1),
-			(111, '02', 'projeto tamar','femea', 2); 
+ insert into cliente (idCliente,nomeCliente,sexoPreferencia,idCiclo)
+	values	(110, 'Projeto tamar', 'macho', 1),
+			(111, 'projeto tamar','femea', 2); 
             
+create table pedido(
+idPedido int primary key,
+numPedido int,
+idCliente int,
+constraint fk_pedido_cliente FOREIGN KEY (idCliente) REFERENCES cliente (idCliente)
+);
+
 create table incubacao(
 idIncubacao int primary key auto_increment,
 descIncubacao varchar(40),
@@ -72,6 +79,3 @@ idCiclo int,
 constraint fk_incubacao_periodoIncubacao FOREIGN KEY (idCiclo) REFERENCES periodoIncubacao (idCiclo)
 );
 
-insert into incubacao (descIncubacao, matriz, nOvos, dataInicio, dataLimite, idCliente, idCiclo) 
-		values ('1º incubação de 2020','amélia',120,'24/07/2020','22/09/2020',110,2),
-				('2º incubação de 2020', 'luara',120, '24/07/2020','22/09/2020',111,1);
