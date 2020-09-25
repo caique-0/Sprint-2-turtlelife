@@ -47,9 +47,10 @@ cpfCartao varchar(11),
 cnpjCartao varchar(40),
 validadeCartao varchar(8),
 cvcCartao int,
-constraint pk_pagamentos_dadosPj foreign key (idDadosPj) references dadosPj (idDadosPj),
+constraint fk_pagamentos_dadosPj foreign key (idDadosPj) references dadosPj (idDadosPj),
 idDadosPj int
 );
+
 
     
 create table periodoInc (
@@ -60,7 +61,7 @@ primeioroP_temp varchar(40),
 segundoP_dias varchar(40), 
 segundoP_temp varchar (40), 
 terceiroP_dias varchar(40),
-tercceiroP_temp varchar(40)
+terceiroP_temp varchar(40)
 );
 
 insert into periodoInc values 

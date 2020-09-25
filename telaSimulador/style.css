@@ -61,7 +61,7 @@ body{
 /* Em labelAmbiental é a estilização dos campos de Input da simulação dos Institutos */
 .labelAmbiental{
     background-color: #E3E3E3; /* cor de fundo do botão */
-    width: 310px; /* largura do campo */
+    width: 335px; /* largura do campo */
     padding: 8px; /* preenchimento do campo pra cima e pra baixo */
 }
 
