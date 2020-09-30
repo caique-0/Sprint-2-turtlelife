@@ -17,4 +17,3 @@ git config --global user.email “seu email cadastrado no github aqui dentro das
 
 git config --global user.name “coloca o nome que quer ser identificado” (para cadastrar o seu nome no terminal)
 
-
