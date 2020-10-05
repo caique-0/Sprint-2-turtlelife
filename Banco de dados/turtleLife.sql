@@ -24,13 +24,13 @@ insert into dadosPJ (nomeEmpresa, emailPJ, telefonePJ, enderecoPJ, senhaPJ, tipo
 
 create table pagamentos (
 idPagamentos int primary key auto_increment,
-dataReferencia varchar(8),
+dataReferencia date,
 formaPagamento varchar(10),
 numCartao int,
 nomeCartao varchar(50),
 cpfCartao varchar(11),
 cnpjCartao varchar(40),
-validadeCartao varchar(8),
+validadeCartao date,
 cvcCartao int,
 constraint fk_pagamentos_dadosPj foreign key (idDadosPj) references dadosPj (idDadosPj),
 idDadosPj int
@@ -40,11 +40,11 @@ create table periodoInc (
 idCiclo int primary key,
 descPeriodo varchar(40),
 primeiroP_dias varchar(40),
-primeioroP_temp varchar(40),
+primeioroP_temp float,
 segundoP_dias varchar(40), 
-segundoP_temp varchar (40), 
+segundoP_temp float, 
 terceiroP_dias varchar(40),
-terceiroP_temp varchar(40)
+terceiroP_temp float
 );
 
 insert into periodoInc values 
@@ -56,7 +56,7 @@ numPedido int primary key auto_increment,
 idCliente int,
 nomeCliente varchar(40),
 sensores varchar(20), 
-sexoPreferencia varchar(40),
+sexoPreferencia char(1),
 constraint fk_cliente_periodoInc  FOREIGN KEY (idCiclo) REFERENCES periodoInc (idCiclo),
 idCiclo int
  );
@@ -71,8 +71,8 @@ idIncubacao int primary key auto_increment,
 descIncubacao varchar(40),
 matriz varchar(20),
 nOvos int,
-dataInicio varchar(20),
-dataLimite varchar(20),
+dataInicio date,
+dataLimite date,
 constraint fk_incubacao_periodoInc FOREIGN KEY (idCiclo) REFERENCES periodoInc (idCiclo),
 constraint fk_incubacao_cliente FOREIGN KEY (numPedido) REFERENCES cliente (numPedido),
 numPedido int,
