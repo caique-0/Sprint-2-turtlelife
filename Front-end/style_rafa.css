@@ -1,0 +1,340 @@
+/* GLOBAL */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap);
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+.container {
+    width: 80%;
+    margin: auto;
+    height: 70px;
+}
+
+.traco {
+    height: 3px;
+    width:6%;
+    background:linear-gradient(45deg, #9ee674, #8eca18);
+    margin-top: 10px;
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(45deg, #9ee674, #1ec1c4);
+    width: 100%;
+}
+
+.header h1 {
+    float: left;
+}
+
+/* MENU */
+.nav {
+    float: right;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav li {
+    display: inline-block;
+    padding: 20px 20px 0px 20px;
+}
+/* SHOWCASE */
+.showcase {
+    height: 700px;
+    width: 100%;
+    background-color: #1ec1c4;
+    display:inline-block;
+    background: linear-gradient(45deg, rgba(109, 217, 190, 0.1), rgba(30, 193, 192, 0.2)), url("img/banner.jpg") center top no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.showcase h2 {
+    font-size: 80px;
+    color: white;
+    padding-top: 75px;
+    font-weight: 400;
+    line-height: 56px;
+    margin: 30px 0 10px 0;
+}
+
+.showcase p {
+    font-size: 20px;
+    color: white;
+    padding-top: 20px;
+}
+
+/* SOBRE */
+#sobre {
+    height: 700px;
+    width: 100%;
+    background-color:transparent;
+    display:inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    padding-top: 30px;
+}
+
+#sobre h1 {
+    font-weight: 100;
+}
+
+.divisor {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row; 
+}
+
+
+#sobre p {
+    color:rgb(51, 51, 51);
+    line-height: 2.5;
+}
+
+.p_small {
+    line-height:0.9;
+}
+
+.logo{
+    height:400px;
+    width:50%;
+    float:left;
+}
+
+.text-sobre-img{
+    height:400px;
+    width:50%;
+    float:left;
+    padding-top: 110px;
+}
+
+.text-sobre-empresa{
+    color:#414040;
+    font-size: 18px;
+    text-decoration: none;
+    display: flex;
+}
+
+/* PROJETO */
+#projeto{
+    height: 2000px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.box-turtle{
+    height:350px;
+    width: 100%;
+    background-color: white;
+}
+.img-box-turtle{
+    height:300px;
+    width:35%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    float:left;
+}
+.img-turtle-project{
+    height:80%;
+    width: 80%;
+}
+
+.text-box-turtle{
+    height:300px;
+    width:65%;
+    float:left;   
+}
+
+.text-box-turtle h2 {
+    font-weight: 100;
+}
+
+.text-turtle1{
+    float:left;
+    width:50%;
+    height: 100%;
+}
+
+.title-text{
+    font-weight: initial;
+    color:#414040;
+        
+}
+
+.textturtle{
+    font-weight: initial;
+    color:#414040;
+    font-size: 16px;
+}
+
+.text-turtle2{
+    float:left;
+    width:50%;
+    height: 100%; 
+}
+
+.box1{
+    height:30%;
+    width: 100%;
+    background-color:transparent;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.sub-box1 h1{
+    text-align: center;
+    margin-top: 20%;
+}
+
+.sub-box1 h4{
+    text-align: center;
+}
+
+.sub-box1 p{
+    text-align: justify;
+}
+
+
+h4{
+    font-weight: initial;
+    color:#414040;
+}
+
+.sub-box2{
+    height:90%;
+    width:50%;
+    background-color:transparent;
+    float:left;
+    margin-right: 20px;
+    margin-top: 270px;
+}
+
+.box2{
+    height:30%;
+    width: 100%;
+    background-color:transparent;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.sub-box3{
+    height:90%;
+    width:50%;
+    background-color:transparent;
+    float:left;
+    margin-left: 20px;
+    opacity: 90%;
+}
+
+.sub-box4{
+    height:90%;
+    width:50%;
+    background-color:transparent;
+    float:left;
+    margin: 20px;
+    margin-top: 25%;
+}
+
+.sub-box4 h2{
+    text-align: center,justify;
+}
+.sub-box4 h4{
+    text-align: center;
+}
+.sub-box4 p{
+    text-align: justify;
+}
+
+.box3{
+    height:30%;
+    width: 100%;
+    background-color:transparent;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.sub-box5{
+    height:90%;
+    width:50%;
+    background-color:transparent;
+    float:left;
+    margin: 20px;
+    margin-top: 25%;
+}
+
+.sub-box6{
+    height:90%;
+    width:50%;
+    background-color: transparent;
+    float:left;
+    margin-left: 20px;
+    opacity: 90%;
+    margin: 20px;
+    margin-top: 25%;
+}
+
+.title-projeto{
+    font-weight: initial;
+    color:#414040;
+}
+
+/* TIME */
+#time{
+    height: 600px;
+    width: 100%;
+    background-color:transparent;
+    display:inline-block;
+    justify-content:center;
+    align-items: center;
+    margin-top: 21px;
+}
+.box-time{
+    height:50%;
+    width: 100%;
+    background-color:#1ec1c4;
+    text-align:center;
+    display:flex;
+    justify-content:center;
+    align-items: center;   
+}
+.sub-box-time{
+    height:75%;
+    width:20%;
+    margin-bottom: none;
+    margin-right: 2%;
+    background-color:#d34232;
+    float:left;
+}
+
+.img-time{
+    height:75%;
+    width:90%;
+    margin-left:5%;
+    background-color: pink;
+    border-radius:50%;
+}
+
+.aimg{
+    height:100%;
+    width:100%;
+    border-radius:45%;
+}
