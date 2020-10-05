@@ -131,9 +131,21 @@
 
 /* PROJETO */
 #projeto{
-    height: 2000px;
     width: 100%;
     background-color: #fff;
+}
+
+.projetotexto{
+    width: 100%;
+    background-color:transparent;
+    display:inline-block;
+    justify-content:center;
+    align-items: center;
+    margin-top: 21px;
+}
+
+.projetotexto h1 {
+    font-size: 30px;
 }
 
 .box-turtle{
@@ -198,6 +210,11 @@
     display: flex;
 }
 
+.sub-box1 {
+    padding-top: 15%;
+    padding-right: 20px;
+}
+
 .sub-box1 h1{
     text-align: center;
     margin-top: 20%;
@@ -250,7 +267,6 @@ h4{
     background-color:transparent;
     float:left;
     margin: 20px;
-    margin-top: 25%;
 }
 
 .sub-box4 h2{
@@ -295,6 +311,10 @@ h4{
 .title-projeto{
     font-weight: initial;
     color:#414040;
+}
+
+.img-turtle1 {
+
 }
 
 /* TIME */
