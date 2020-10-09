@@ -356,7 +356,6 @@ h4{
 .box-time{
     height:50%;
     width: 100%;
-    background-color:#1ec1c4;
     text-align:center;
     display:flex;
     justify-content:center;
@@ -368,7 +367,6 @@ h4{
     width:20%;
     margin-bottom: none;
     margin-right: 2%;
-    background-color:#d34232;
     float:left;
 }
 
@@ -376,7 +374,6 @@ h4{
     height:75%;
     width:90%;
     margin-left:5%;
-    background-color: pink;
     border-radius:50%;
 }
 
