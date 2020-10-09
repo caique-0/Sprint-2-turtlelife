@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style_calc.css" rel="stylesheet" type="text/css" /> <!-- Aqui estou chamando o arquivo onde estão as estilizações do CSS -->
+    <title>Calculadora de impacto</title>
+</head>
+<body>
+<!-- HEADER -->
+    <div class="header">
+        <div class="container1">
+            <div class="title-header">
+                <h1 class="titulo">TurtleLife</h1>
+            </div>
+<!-- MENU -->
+            <div class="nav">
+                <ul>
+                    <li class="li_menu"><a href="index.html">Home</a>
+                    </li>
+                    <li class="li_menu"><a href="index.html">Sobre nós</a>
+                    </li>
+                    <li class="li_menu"><a href="index.html">Projeto</a>
+                    </li>
+                    <li class="li_menu"><a href="index.html">Time</a>
+                    </li>
+                    <li class="li_menu"><a href="#calculadora">Calculadora</a>
+                    </li>
+                    <li class="li_menu"><a href="grafico.html">Gráfico</a>
+                    </li>
+                    <li class="li_menu"><a href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section class="container">
+        <div class="duas-colunas">
+            <div class="turtle-image"></div> <!-- Essa DIV eu criei para a coluna que ficará a esquerda da página com a imagem, e a class é para linkar esse campo com a estilização no css -->
+        </div>
+
+        <div class="duas-colunas">
+            <div class="content">
+				<h2 class="titleCal">Calculadora de Impacto</h2>
+                <p class="textoEscuro">Sabemos que todo animal dentro da nossa biodiversidade tem sua importância, porem não paramos para 
+                    pensar em como afetam diretamente ou indiretamente nossa rotina ou empresa.</p>
+                    <p class="textoMedio">Você é uma:</p><br />
+                    <div style="text-align: center;">
+						<button onclick="instituicao()" class="btnInstituicao">Instituição</button>
+                    	<button onclick="pesca()" class="btnPesca">Empresa de Pesca</button>
+					</div>
+                
+                <br/><hr><br/>
+					
+                    <p class="textoEscuro">Como Instituto de preservação da vida animal, sugerimos que faça abaixo uma simulação para calcular
+                    a porcentagem de machos e fêmeas que podem nascer de acordo com a quantidade de ovos na incubação. Assim
+                    poderá ter uma noção de como é possível ter controle dos sexos de ovos incubados!</p><br>
+
+                    <div style="text-align: center;">
+                        <input type="text" id="total" class="labelAmbiental" placeholder="Informe a quantidade total de ovos na incubação"> <br/><br/>
+                        <input type="text" id="femea" class="labelAmbiental" placeholder="Informe a quantidade de ovos que eclodiram de fêmeas:"> <br/><br/>
+                        <input type="text" id="macho" class="labelAmbiental" placeholder="Informe a quantidade de ovos que eclodiram de machos:"><br/><br/>
+                        
+                        <button onclick="simular()" class="btnSimular">Simular</button>
+                        <br/><br>   
+
+                        <div id="um" class="textoMedio"></div> <br/>
+                    </div>
+                <hr><br>
+					
+                    <p class="textoEscuro">Você sabia que as empresas de Pesca serão uma das principais afetadas na extinção de tartarugas?
+                    Isso porque elas são predadoras das águas-vivas (as águas-vivas são predadoras dos peixes), sem elas a escassez de peixes
+                    logo chegaria pois aumentaria drasticamente a quantidade de águas-vivas no oceano. Automaticamente sua empresa seria afetada
+                    e seu rendimento financeiro reduziria. Vamos ver quanto seria seu prejuizo e seu lucro na prática? </p><br>
+                    
+                    <div style="text-align: center;">
+                        <label class="textoMedio">Informe a sua renda mensal bruta: </label>
+                        <input type="text" id="rendaMensal" class="labelPesca" placeholder="Insira o valor da sua renda"> <br/><br/>
+
+                        <button onclick="calcular()" class="btnCalcular">Calcular</button><br/> <br/> 
+
+                        <div id="div_femea" class="textoMedio"></div> <br/>
+                        <div id="div_macho" class="textoMedio"></div>
+                    </div>
+			</div>
+            
+        </div>
+    </section>
+</body>
+<div class="footer">
+    <div class="container1">
+        <h3>© Copyright <strong>TurtleLife</strong>. Todos os direitos reservados</h3>
+    </div>
+</div>
+</html>
+
+<script>
+
+    function simular(){
+
+        var fem = ((femea.value / total.value) * 100);
+        var mac = ((macho.value / total.value) * 100);
+
+        um.innerHTML = (`<br>A porcentagem de fêmeas é igual a: ${fem}%`);
+        um.innerHTML += (`<br>A porcentagem de macho é igual a: ${mac}%`);
+    }
+
+    function calcular(){
+
+        var prejuizo = (0.4 * rendaMensal.value);
+        var lucro = (0.3 * rendaMensal.value);
+
+        div_femea.innerHTML = (`Seu <strong>lucro</strong> mensal, caso invista na preservação de tartarugas, a longo prazo será de: R$ ${lucro}`);
+        div_macho.innerHTML += (`<br>Seu <strong>prejuízo</strong> mensal, caso não invista na preservação de tartarugas, a longo prazo será de: R$ ${prejuizo}`);
+    }
+	
+</script>
