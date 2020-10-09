@@ -17,6 +17,11 @@
     height: 70px;
 }
 
+.container-corpo {
+    width: 80%;
+    margin: auto;
+}
+
 .traco {
     height: 3px;
     width:6%;
@@ -165,10 +170,11 @@
 }
 
 .box-turtle{
-    height:350px;
+    /* height:350px; */
     width: 100%;
     background-color: white;
     margin-top: 5%;
+    overflow: auto;
 }
 .img-box-turtle{
     height:300px;
@@ -354,7 +360,8 @@ h4{
     text-align:center;
     display:flex;
     justify-content:center;
-    align-items: center;   
+    align-items: center;
+    margin-top: 30px;
 }
 .sub-box-time{
     height:75%;
@@ -379,8 +386,23 @@ h4{
     border-radius:45%;
 }
 
-#rodape{
+.time h1 {
+    font-weight: initial;
+    font-size: 80px;
+}
+
+/* CALCULADORA */
+
+/* FOOTER */
+.footer{
     height: 100px;
-    background-color: #9ee674;
+    background: linear-gradient(45deg, #9ee674, #1ec1c4);
     margin-top: 10%;
+    text-align: center;
+}
+
+.footer h3 {
+    color: white;
+    padding-top: 42px;
+    font-weight: 100;
 }
