@@ -12,6 +12,44 @@
             padding: 0;
         }
 
+    /*MENU*/
+    
+    .container{ 
+    width: 80%;
+    margin: auto;
+    height: 70px;
+    }
+
+    .header {
+    background: linear-gradient(45deg, #9ee674, #1ec1c4);
+    width: 100%;
+}
+
+    .header h1 {
+        float: left;
+    }
+
+    .titulo{
+        margin-top: 17px;
+        color: White;
+    }
+
+    /* MENU */
+    .nav {
+        margin-top: 7px;
+        float: right;
+    }
+
+    .nav a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .nav li {
+        display: inline-block;
+        padding: 20px 20px 0px 20px;
+    }
+
     div#container{
         width: 100vw;
         height: 100vh;
@@ -19,13 +57,14 @@
         flex-direction: row;
         justify-content: right;
         align-items: center;
-        background-color: whitesmoke;
+        background-color: white;
     }
 
         div#form{
             margin-right: 10%;
-            padding: 39px 30px;
-            border-top: solid 10px #246D5E;
+            width: 60%;
+            padding: 39px 0px;
+            /* border-top: solid 10px #246D5E; */
             justify-content: center;
             align-items: center;
             background-color: white;
@@ -34,7 +73,7 @@
         h3{
             margin-bottom: 28px;
             margin-top: -4px;
-            margin-left: 7%;
+            margin-left: 40%;
             font-family: 'Poppins', sans-serif;
             font-size: 16px;
         }
@@ -42,7 +81,16 @@
         input{
             margin-top: 12px;
             padding: 10px;
+            width: 88%;
             text-align: center;
+        }
+
+        #input_senha{
+            margin-bottom: 10%;
+        }
+
+        #input_email{
+            margin-bottom: 10%;
         }
 
         #btn{
@@ -51,20 +99,21 @@
         }
 
         #btn-cadastro{
-            margin: 10px 8px;
+            margin: 10px 0px;
+            margin-left: 6px;
             padding: 0;
-           
-        }
+        }   
 
         .btns{
-            width: 85px;
+            width: 140px;
             height: 29px;
             color: white;
-            background-color: #246D5E;
+            background: linear-gradient(45deg,#535993, #1ec1c4);
             border: none;
             cursor: pointer;
+            border-radius: 5px;
         }
-        
+
         #back-turtle{
             width: 80%;
             border-right: solid 10px #1ec1c4;
@@ -72,25 +121,58 @@
 
         #container-img{
             margin-left: -10%;
+            margin-top: -6.3%;
             transform: skew(-20deg);
 
         }
     </style>
 </head>
 <body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="container">
+            <div class="title-header">
+                <h1 class="titulo">TurtleLife</h1>
+            </div>
+<!-- MENU -->
+            <div class="nav">
+                <ul>
+                    <li class="li_menu">
+                        <a href="">Home</a href="index.hmtl"></li class="li_menu">
+                    <li class="li_menu"><a href="#sobre">Sobre nós</a>
+                    </li>
+                    <li class="li_menu"><a href="#projeto">Projeto</a>
+                    </li>
+                    <li class="li_menu"><a href="#time">Time</a>
+                    </li>
+                    <li class="li_menu"><a href="calculadora.html">Calculadora</a>
+                    </li>
+                    <li class="li_menu"><a href="grafico.html">Gráfico</a>
+                    </li>
+                    <li class="li_menu"><a href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <div id='container'>
         <div id="container-img">
             <img src="img/tartaruga2.0.jpg" alt="" id="back-turtle">
         </div>
         
         <div id="form">
-            <h3>Entre com sua conta!</h3>
+            <h3>Login!</h3>
             <input id='input_email' placeholder="Email">
             <br>
-            <input type="password" id='input_senha' placeholder="senha">
+            <input type="password" id='input_senha' placeholder="Senha">
             <br>
-            <button id='btn' class='btns'>Entrar</button>
-            <button id='btn-cadastro' class='btns'>Cadastre-se</button>
+            <div id="buttons">
+                <button id='btn' class='btns'>Entrar</button>
+                <button id='btn-cadastro' class='btns'>Cadastre-se</button>
+            </div>
+         
         </div>
     </div>     
 </body>
