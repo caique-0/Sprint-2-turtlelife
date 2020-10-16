@@ -33,6 +33,7 @@
 .header {
     background: linear-gradient(45deg, #9ee674, #1ec1c4);
     width: 100%;
+position: fixed;
 }
 
 .header h1 {
