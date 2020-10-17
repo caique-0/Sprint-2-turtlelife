@@ -55,7 +55,7 @@
             <input type="password" id='input_senha' placeholder="Senha"> <!--DEIXAR O CAMPO COM BOLINHAS!-->
             <br>
             <div id="buttons">
-                <button id='btn' class='btns'>Entrar</button>
+                <button id='btn' class='btns' onclick="validarLogin()">Entrar</button>
                 <button id='btn-cadastro' class='btns'>Cadastre-se</button>
             </div>
         </div>
@@ -68,3 +68,16 @@
     </div>
 </body>
 </html>
+<script>
+    function validarLogin(){
+          if(input_email.value.indexOf("@") == -1 || input_email.value.indexOf(".") == -1){
+            input_email.style.border = "solid 1px #e32636";
+          }
+
+          if(input_senha.value.length < 6){
+            input_senha.style.border = "solid 1px #e32636";
+          }
+
+    }
+  
+</script>
