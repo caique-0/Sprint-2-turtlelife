@@ -32,7 +32,10 @@ validadeCartao date,
 cvcCartao int,
 fk_idcadastro int, 
 foreign key (fk_idcadastro) references cadastro (idcadastro)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 80068edc134857d691501c352edeb4993315c8bc
 );
     
 create table Ciclo (
@@ -50,12 +53,17 @@ insert into periodoInc values
 	(1,'macho','20 dias', 24,'20 dias',24,'até 20 dias','temperatura ambiente'),
 	(2,'femea','20 dias', 31 ,'20 dias',31,'até 20 dias','temperatura ambiente');
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 80068edc134857d691501c352edeb4993315c8bc
 create table pedido (
 idPedido int primary key auto_increment,
 fk_idcadastro int,
 foreign key ( fk_idcadastro)  REFERENCES cadastro (idCadastro),
 fk_idciclo int, 
 foreign key ( fk_idciclo)  REFERENCES ciclo (idCiclo)
+<<<<<<< HEAD
    
  );
 
@@ -72,6 +80,35 @@ insert into sensor (incubadora) value('001m');
 				
 
 							
+=======
+ );
+=======
+create table cliente (
+numPedido int primary key auto_increment,
+idCliente int,
+nomeCliente varchar(40),
+sexoPreferencia varchar(10),
+constraint fk_cliente_periodoInc  FOREIGN KEY (idCiclo) REFERENCES periodoInc (idCiclo),
+idCiclo int
+ );
+
+insert into cliente (idCliente,nomeCliente,sexoPreferencia,idCiclo) values
+	(111, 'Projeto tamar','macho', 1),
+	(111, 'projeto tamar','femea', 2); 
+>>>>>>> d600105f90b3798c2b7415fc8886135e49321cf6
+
+insert into pedido  (fk_idcadastro,fk_idciclo) values
+	(1,1),
+	(2,2); 
+
+create table sensor(
+ idsensor int primary key auto_increment,
+ incubadora varchar (40)
+ );
+ 
+insert into sensor (incubadora) value('001m');
+				
+>>>>>>> 80068edc134857d691501c352edeb4993315c8bc
 create table incubacao(
 idIncubacao int primary key auto_increment,
 matriz varchar(20),
@@ -84,6 +121,11 @@ fk_idsensor int, FOREIGN KEY (fk_idsensor) REFERENCES sensor (idsensor)
 
 insert into incubacao (descIncubacao, matriz, nOvos, dataInicio, dataLimite, numPedido, idCiclo) 
 values 
+<<<<<<< HEAD
+                             ('amélia',120,'2020-04-10','2020-10-06',1,2),
+							 ('luara',120, '2020-04-10','2020-10-06',2,1);
+=======
+<<<<<<< HEAD
                              ('amélia',120,'2020-04-10','2020-10-06',1,2),
 							 ('luara',120, '2020-04-10','2020-10-06',2,1);
                              
@@ -92,6 +134,31 @@ idleitura int primary key auto_increment,
 temperatura float,
 data_horario datetime,
 fk_idsensor	int, FOREIGN KEY (fk_idsensor) REFERENCES sensor (idsensor)			
+);                             
+=======
+                             ('1º incubação de 2020','amélia',120,'2020-04-10','2020-10-06',1,2),
+							 ('2º incubação de 2020', 'luara',120, '2020-04-10','2020-10-06',2,1);
+>>>>>>> 80068edc134857d691501c352edeb4993315c8bc
                              
+create table leitura_dados(
+idleitura int primary key auto_increment,
+temperatura float,
+data_horario datetime,
+fk_idsensor	int, FOREIGN KEY (fk_idsensor) REFERENCES sensor (idsensor)			
+                             
+<<<<<<< HEAD
 );                             
  
+=======
+ create table sensor(
+ idsensor int primary key auto_increment,
+ temperatura float,
+ constraint Fk_sensor_incubacao FOREIGN KEy (idIncubacao) REFERENCES incubacao (idIncubacao),
+ idIncubacao int);
+
+insert into sensor (temperatura,idIncubacao) value
+
+                                 (33,1),
+								 (24,2); 
+>>>>>>> d600105f90b3798c2b7415fc8886135e49321cf6
+>>>>>>> 80068edc134857d691501c352edeb4993315c8bc

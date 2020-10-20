@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*HEADER*/
+
+.container{ 
+width: 80%;
+margin: auto;
+height: 70px;
+}
+
+.header {
+background: linear-gradient(45deg, #9ee674, #1ec1c4); /* DEIXAR O DEGRADÊ NO MENU*/
+width: 100%;
+}
+
+.header h1 {
+float: left; 
+}
+
+.titulo{
+margin-top: 17px;
+color: White;
+}
+
+/* MENU */
+.nav {
+margin-top: 7px;
+float: right;
+}
+
+.nav a {
+text-decoration: none;
+color: white;
+}
+
+.nav li {
+display: inline-block;
+padding: 20px 20px 0px 20px;
+}
+
+div#container{
+display: flex;
+flex-direction: row;
+justify-content: right;
+align-items: center;
+background-color: white;
+}
+
+div#form{
+    margin-right: 10%;
+    width: 60%;
+    padding: 39px 0px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+#login{
+    margin-bottom: 28px;
+    margin-top: -4px;
+    margin-left: 38%;
+    font-family: 'Poppins', sans-serif; /*FONTE DA TELA DE LOGIN TIRADA DO GOOGLE FONTS*/
+    font-size: 21px;
+}
+
+input{
+    margin-top: 12px;
+    padding: 10px;
+    width: 88%;
+    text-align: center;
+}
+
+#input_senha{
+    margin-bottom: 10%;
+}
+
+#input_email{
+    margin-bottom: 10%;
+}
+
+#btn{
+    margin: 10px 0px;
+    padding: 6px;
+}
+
+#btn-cadastro{
+    margin: 10px 0px;
+    margin-left: 6px;
+    padding: 0;
+}   
+
+.btns{
+    width: 140px;
+    height: 29px;
+    color: white;
+    background: linear-gradient(45deg,#535993, #1ec1c4); /*DEGRADÊ DOS BOTÕES*/
+    border: none;
+    cursor: pointer; /*DEIXAR O CURSOR COM AQUELA MÃOZINHA QUANDO PASSA POR CIMA DOS BOTÕES*/
+    border-radius: 5px; /*DEIXAR OS BOTÕES COM BORDA ARREDONDADA*/
+}
+
+#back-turtle{
+    width: 80%;
+}
+
+#container-img{
+    margin-left: -10%;
+    transform: skew(-20deg); /*DEIXAR A IMAGEM NA DIAGONAL*/
+
+}
+
+/*RODPÉ*/
+
+.footer{
+height: 50px;
+background: linear-gradient(45deg, #9ee674, #1ec1c4);
+text-align: center;
+align-items: center;
+flex-direction: row;
+margin-top: -1%;
+}
+
+.footer h3 {
+color: white;   
+font-size: 13px;
+margin-left: 0;
+margin-top: 10px;
+padding-top: 1.5%;
+}
