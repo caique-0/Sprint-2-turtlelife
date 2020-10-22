@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Line Chart</title>
+	<link rel="stylesheet" href="./CSS/grafico.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+	<script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
+	<script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+</head>
+
+<body>
+		<div class="menu-upbar">
+				<div class="div_logo">
+					<img src="./Imagens/logo2.png" alt="">
+					<p>DASHBOARD AREA</p>
+				</div>
+			</div>
+			<input type="checkbox" id="check" checked>
+			<div class="menu-sidebar">
+				<label for="check">
+					<div id="menu" onclick="menu()">
+						<div id="bar1" class="bar"></div>
+						<div id="bar2" class="bar"></div>
+						<div id="bar3" class="bar"></div>
+					</div>
+				</label>
+				<a href="dashboard-turtle-life.html"><img src="./Imagens/grafico.png" alt="">
+					<div class="ajustes">Dashboard</div>
+				</a>
+				<a href=""><img src="./Imagens/usuario-de-perfil.png" alt="">
+					<div class="ajustes">Perfil</div>
+				</a>
+				<a href=""><img src="./Imagens/analytics.png" alt="">
+					<div class="ajustes">Analytics</div>
+				</a>
+				<a href=""><img src="./Imagens/apoio-suporte.png" alt="">
+					<div class="ajustes">Suporte</div>
+				</a>
+				<a href=""><img src="./Imagens/bolsa-de-dinheiro.png" alt="">
+					<div class="ajustes">Financeiro</div>
+				</a>
+				<a href=""><img src="./Imagens/configuracoes.png" alt="">
+					<div class="ajustes">Configurações</div>
+				</a>
+				<a href=""><img src="./Imagens/sair.png" alt="">
+					<div class="ajustes">Logout</div>
+				</a>
+			</div>
+
+		<div class="grafico_dashboard">
+		<h1>TARTARUGAS MARINHAS MACHOS</h1>
+		<section>
+			<h2>Temperatura: <label id='average'>0.00</label></h2>
+		</section>
+		<section style="width:80%">
+			<canvas id="chart"></canvas>
+	</div>
+
+	<script>
+
+		var context = document.getElementById("chart").getContext("2d");
+		context.canvas.width = 850;
+		context.canvas.height = 300;
+
+		var configuration = {
+			type: 'line',
+			data: {
+				datasets: [{
+					label: "Temperature x Time",
+					type: 'line',
+					borderColor: ['#8ECA18']
+				}]
+			},
+			options: {
+				scales: {
+					xAxes: [{
+						// type: 'line',
+						distribution: 'series',
+						ticks: {
+							beginAtZero: true
+						}
+					}],
+					yAxes: [{
+						scaleLabel: {
+							display: true,
+							labelString: 'Temperatura'
+						},
+						ticks: {
+							beginAtZero: true
+						}
+					}]
+				},
+				animation: {
+					duration: 0
+				}
+			}
+		};
+
+		var chart = new Chart(context, configuration);
+
+		//Função para obter os dados de temperatura do server
+		//Seria mais interessante fazer isso com WebSocket, porém para fins academicos, os dados serão atualizados via HTTP
+
+		//Esse atributo dentro do contexto serve para saber qual foi o último índice processado, assim eliminado os outros elementos na
+		//hora de montar/atualizar o gráfico
+		this.lastIndexTemp = 0;
+		this.time = 0;
+
+		function get_data() {
+
+			var http = new XMLHttpRequest();
+			http.open('GET', 'http://localhost:3000/api', false);
+			http.send(null);
+
+			var obj = JSON.parse(http.responseText);
+			if (obj.data.length == 0) {
+				return;
+			}
+
+			var _lastIndexTemp = this.lastIndexTemp;
+			this.lastIndexTemp = obj.data.length;
+			listTemp = obj.data.slice(_lastIndexTemp);
+
+			listTemp.forEach(data => {
+				//Máximo de 60 itens exibidos no gráfico
+				if (chart.data.labels.length == 10 && chart.data.datasets[0].data.length == 10) {
+					chart.data.labels.shift();
+					chart.data.datasets[0].data.shift();
+				}
+
+				chart.data.labels.push(this.time++);
+				chart.data.datasets[0].data.push(parseFloat(data));
+				chart.update();
+			});
+
+			if (average >= 29) {
+				average.style.color = 'red';
+				alert(`Temperatura crítica! Está ${average.toFixed(2)} favor controlar a temperatura`)
+			} else if (average >= 28 && average < 29) {
+				average.style.color = 'darkorange';
+			} else if (average >= 27 && average < 28) {
+				average.style.color = 'darkyellow';
+			} else if (average >= 26 && average < 27) {
+				average.style.color = 'green';
+			} else if (average >= 25 && average < 26) {
+				average.style.color = 'darkgreen';
+			} else if (average >= 24 && average < 25) {
+				average.style.color = 'lightgreen';
+			} else if (average >= 23 && average < 24) {
+				average.style.color = 'yellow';
+			} else if (average >= 22 && average < 23) {
+				average.style.color = 'orange';
+			} else if (average >= 21 && average < 22) {
+				average.style.color = 'darkblue';
+			}
+
+			document.getElementById('average').textContent = obj.average;
+			document.getElementById('averageHour').textContent = obj.averageHour;
+		}
+
+		//Second Graphic
+
+
+
+		setInterval(() => {
+			get_data();
+		}, 1000);
+
+	</script>
+</body>
+
+</html>

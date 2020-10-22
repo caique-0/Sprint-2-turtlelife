@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/99ba45e938.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/dashboard-turtle-life.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="menu-upbar">
+        <div class="div_logo">
+            <img src="./Imagens/logo2.png" alt="">
+            <p>DASHBOARD AREA</p>
+        </div>
+    </div>
+    <input type="checkbox" id="check" checked>
+    <div class="menu-sidebar">
+        <label for="check">
+            <div id="menu" onclick="menu()">
+                <div id="bar1" class="bar"></div>
+                <div id="bar2" class="bar"></div>
+                <div id="bar3" class="bar"></div>
+            </div>
+        </label>
+        <a href="dashboard-turtle-life.html"><img src="./Imagens/grafico.png" alt="">
+            <div class="ajustes">Dashboard</div>
+        </a>
+        <a href=""><img src="./Imagens/usuario-de-perfil.png" alt="">
+            <div class="ajustes">Perfil</div>
+        </a>
+        <a href=""><img src="./Imagens/analytics.png" alt="">
+            <div class="ajustes">Analytics</div>
+        </a>
+        <a href=""><img src="./Imagens/apoio-suporte.png" alt="">
+            <div class="ajustes">Suporte</div>
+        </a>
+        <a href=""><img src="./Imagens/bolsa-de-dinheiro.png" alt="">
+            <div class="ajustes">Financeiro</div>
+        </a>
+        <a href=""><img src="./Imagens/configuracoes.png" alt="">
+            <div class="ajustes">Configurações</div>
+        </a>
+        <a href=""><img src="./Imagens/sair.png" alt="">
+            <div class="ajustes">Logout</div>
+        </a>
+    </div>
+
+    <div class="dashboard-area">
+        <div class="dashboard-container">
+            <div class="dashboard-estado">
+                <a href="./index.html">
+                    <img src="./Imagens/incubadora-tartaruga.jpeg" class="incubadora-img" alt=""></a>
+                <div class="div_bordas">
+                    <h3>Incubadora Macho</h3><br><br>
+                    <p>Quantidade de ovos: 5<br><br>
+                        Temperatura da Incubadora:<br>
+                        <b id="average">0</b><b>°C</b><br><br>
+                        Ciclo: 20/10/2020 - 30/11/2020
+                    </p>
+                </div>
+            </div>
+            <div class="dashboard-estado">
+                <a href="./index.html">
+                    <img src="./Imagens/incubadora-tartaruga.jpeg" class="incubadora-img" alt=""></a>
+                <div class="div_bordas">
+                    <h3>Incubadora Fêmea</h3><br><br>
+                    <p>Quantidade de ovos: 5<br><br>
+                        Temperatura da Incubadora:<br>
+                        <b id="averageFe" onbevent="alertaTempFemea()">0</b><b>°C</b><br><br>
+                        Ciclo: 20/10/2020 - 30/11/2020
+                    </p>
+                </div>
+            </div>
+            <div class="dashboard-estado">
+                <a href="./index.html">
+                    <img src="./Imagens/incubadora-tartaruga.jpeg" class="incubadora-img" alt=""></a>
+                <div class="div_bordas">
+                    <h3>Incubadora Macho</h3><br><br>
+                    <p>Quantidade de ovos: 5<br><br>
+                        Temperatura da Incubadora:<br>
+                        <b id="average2">0</b><b>°C</b><br><br>
+                        Ciclo: 20/10/2020 - 30/11/2020
+                    </p>
+                </div>
+            </div>
+            <div class="dashboard-estado">
+                <a href="./index.html">
+                    <img src="./Imagens/incubadora-tartaruga.jpeg" class="incubadora-img" alt=""></a>
+                <div class="div_bordas">
+                    <h3>Incubadora Macho</h3><br><br>
+                    <p>Quantidade de ovos: 5<br><br>
+                        Temperatura da Incubadora:<br>
+                        <b id="average3">0</b><b>°C</b><br><br>
+                        Ciclo: 20/10/2020 - 30/11/2020
+                    </p>
+                </div>
+            </div>
+            <div class="dashboard-estado">
+                <a href="./index.html">
+                    <img src="./Imagens/incubadora-tartaruga.jpeg" class="incubadora-img" alt=""></a>
+                <div class="div_bordas">
+                    <h3>Incubadora Macho</h3><br><br>
+                    <p>Quantidade de ovos: 5<br><br>
+                        Temperatura da Incubadora:<br>
+                        <b id="averageFe2">0</b><b>°C</b><br><br>
+                        Ciclo: 20/10/2020 - 30/11/2020
+                    </p>
+                </div>
+            </div>
+            <div class="dashboard-estado">
+                <img src="./Imagens/incubadora-tartaruga.jpeg" class="incubadora-img" alt="">
+                <div class="div_bordas">
+                    <h3>Incubadora Macho</h3><br><br>
+                    <p>Quantidade de ovos: 5<br><br>
+                        Temperatura da Incubadora:<br>
+                        <b id="average4">0</b><b>°C</b><br><br>
+                        Ciclo: 20/10/2020 - 30/11/2020
+                    </p>
+                </div>
+            </div>
+            <div class="dashboard-estado">
+                <a href="./index.html">
+                    <img src="./Imagens/incubadora-tartaruga.jpeg" class="incubadora-img" alt=""></a>
+                <div class="div_bordas">
+                    <h3>Incubadora Macho</h3><br><br>
+                    <p>Quantidade de ovos: 5<br><br>
+                        Temperatura da Incubadora:<br>
+                        <b id="average5">0</b><b>°C</b><br><br>
+                        Ciclo: 20/10/2020 - 30/11/2020
+                    </p>
+                </div>
+            </div>
+            <div class="dashboard-estado">
+                <a href="./index.html">
+                    <img src="./Imagens/incubadora-tartaruga.jpeg" class="incubadora-img" alt=""></a>
+                <div class="div_bordas">
+                    <h3>Incubadora Fêmea</h3><br><br>
+                    <p>Quantidade de ovos: 5<br><br>
+                        Temperatura da Incubadora:<br>
+                        <b id="averageFe3">0</b><b>°C</b><br><br>
+                        Ciclo: 20/10/2020 - 30/11/2020
+                    </p>
+                </div>
+            </div>
+            <div class="dashboard-estado">
+                <a href="./index.html">
+                    <img src="./Imagens/incubadora-tartaruga.jpeg" class="incubadora-img" alt=""></a>
+                <div class="div_bordas">
+                    <h3>Incubadora Macho</h3><br><br>
+                    <p>Quantidade de ovos: 5<br><br>
+                        Temperatura da Incubadora:<br>
+                        <b id="average6">0</b><b>°C</b><br><br>
+                        Ciclo: 20/10/2020 - 30/11/2020
+                    </p>
+                </div>
+            </div>
+            <div class="dashboard-estado">
+                <a href="./index.html">
+                    <img src="./Imagens/incubadora-tartaruga.jpeg" class="incubadora-img" alt=""></a>
+                <div class="div_bordas">
+                    <h3>Incubadora Macho</h3><br><br>
+                    <p>Quantidade de ovos: 5<br><br>
+                        Temperatura da Incubadora:<br>
+                        <b id="average7">0</b><b>°C</b><br><br>
+                        Ciclo: 20/10/2020 - 30/11/2020
+                    </p>
+                </div>
+            </div>
+            <div class="dashboard-estado">
+                <a href="./index.html">
+                    <img src="./Imagens/incubadora-tartaruga.jpeg" class="incubadora-img" alt=""></a>
+                <div class="div_bordas">
+                    <h3>Incubadora Fêmea</h3><br><br>
+                    <p>Quantidade de ovos: 5<br><br>
+                        Temperatura da Incubadora:<br>
+                        <b id="averageFe4">0</b><b>°C</b><br><br>
+                        Ciclo: 20/10/2020 - 30/11/2020
+                    </p>
+                </div>
+            </div>
+            <div class="dashboard-estado">
+                <a href="./index.html">
+                    <img src="./Imagens/incubadora-tartaruga.jpeg" class="incubadora-img" alt=""></a>
+                <div class="div_bordas">
+                    <h3>Incubadora Macho</h3><br><br>
+                    <p>Quantidade de ovos: 5<br><br>
+                        Temperatura da Incubadora:<br>
+                        <b id="average8">0</b><b>°C</b><br><br>
+                        Ciclo: 20/10/2020 - 30/11/2020
+                    </p>
+                </div>
+            </div>
+            <div class="dashboard-estado">
+                <a href="./index.html">
+                    <img src="./Imagens/incubadora-tartaruga.jpeg" class="incubadora-img" alt=""></a>
+                <div class="div_bordas">
+                    <h3>Incubadora Macho</h3><br><br>
+                    <p>Quantidade de ovos: 5<br><br>
+                        Temperatura da Incubadora:<br>
+                        <b id="average9">0</b><b>°C</b><br><br>
+                        Ciclo: 20/10/2020 - 30/11/2020
+                    </p>
+                </div>
+            </div>
+            <div class="dashboard-estado">
+                <a href="./index.html">
+                    <img src="./Imagens/incubadora-tartaruga.jpeg" class="incubadora-img" alt=""></a>
+                <div class="div_bordas">
+                    <h3>Incubadora Fêmea</h3><br><br>
+                    <p>Quantidade de ovos: 5<br><br>
+                        Temperatura da Incubadora:<br>
+                        <b id="averageFe5">0</b><b>°C</b><br><br>
+                        Ciclo: 20/10/2020 - 30/11/2020
+                    </p>
+                </div>
+            </div>
+            <div class="dashboard-estado">
+                <a href="./index.html">
+                    <img src="./Imagens/incubadora-tartaruga.jpeg" class="incubadora-img" alt=""></a>
+                <div class="div_bordas">
+                    <h3>Incubadora Macho</h3><br><br>
+                    <p>Quantidade de ovos: 5<br><br>
+                        Temperatura da Incubadora:<br>
+                        <b id="average10">0</b><b>°C</b><br><br>
+                        Ciclo: 20/10/2020 - 30/11/2020
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    function menu() {
+        document.getElementById('menu').classList.toggle('change');
+    }
+
+    this.lastIndexTemp = 0;
+    this.time = 0;
+
+    function alertaTempMacho() {
+
+        var http = new XMLHttpRequest();
+        http.open('GET', 'http://localhost:3000/api', false);
+        http.send(null);
+
+        var obj = JSON.parse(http.responseText);
+        if (obj.data.length == 0) {
+            return;
+        }
+
+        var _lastIndexTemp = this.lastIndexTemp;
+        this.lastIndexTemp = obj.data.length;
+        listTemp = obj.data.slice(_lastIndexTemp);
+
+        if (obj.average >= 29) {
+            average.style.color = 'red';
+            average2.style.color = 'red';
+            average3.style.color = 'red';
+            average4.style.color = 'red';
+            average5.style.color = 'red';
+            average6.style.color = 'red';
+            average7.style.color = 'red';
+            average8.style.color = 'red';
+            average9.style.color = 'red';
+            average10.style.color = 'red';
+            alert(`Temperatura crítica! Está ${obj.average.toFixed(2)} favor controlar a temperatura`)
+        } else if (obj.average >= 28 && obj.average < 29) {
+            average.style.color = 'darkorange';
+            average2.style.color = 'darkorange';
+            average3.style.color = 'darkorange';
+            average4.style.color = 'darkorange';
+            average5.style.color = 'darkorange';
+            average6.style.color = 'darkorange';
+            average7.style.color = 'darkorange';
+            average8.style.color = 'darkorange';
+            average9.style.color = 'darkorange';
+            average10.style.color = 'darkorange';
+        } else if (obj.average >= 27 && obj.average < 28) {
+            average.style.color = 'darkyellow';
+            average2.style.color = 'darkyellow';
+            average3.style.color = 'darkyellow';
+            average4.style.color = 'darkyellow';
+            average5.style.color = 'darkyellow';
+            average6.style.color = 'darkyellow';
+            average7.style.color = 'darkyellow';
+            average8.style.color = 'darkyellow';
+            average9.style.color = 'darkyellow';
+            average10.style.color = 'darkyellow';
+        } else if (obj.average >= 26 && obj.average < 27) {
+            average.style.color = 'green';
+            average2.style.color = 'green';
+            average3.style.color = 'green';
+            average4.style.color = 'green';
+            average5.style.color = 'green';
+            average6.style.color = 'green';
+            average7.style.color = 'green';
+            average8.style.color = 'green';
+            average9.style.color = 'green';
+            average10.style.color = 'green';
+        } else if (obj.average >= 25 && obj.average < 26) {
+            average.style.color = 'darkgreen';
+            average2.style.color = 'darkgreen';
+            average3.style.color = 'darkgreen';
+            average4.style.color = 'darkgreen';
+            average5.style.color = 'darkgreen';
+            average6.style.color = 'darkgreen';
+            average7.style.color = 'darkgreen';
+            average8.style.color = 'darkgreen';
+            average9.style.color = 'darkgreen';
+            average10.style.color = 'darkgreen';
+        } else if (obj.average >= 24 && obj.average < 25) {
+            average.style.color = 'lightgreen';
+            average2.style.color = 'lightgreen';
+            average3.style.color = 'lightgreen';
+            average4.style.color = 'lightgreen';
+            average5.style.color = 'lightgreen';
+            average6.style.color = 'lightgreen';
+            average7.style.color = 'lightgreen';
+            average8.style.color = 'lightgreen';
+            average9.style.color = 'lightgreen';
+            average10.style.color = 'lightgreen';
+        } else if (obj.average >= 23 && obj.average < 24) {
+            average.style.color = 'yellow';
+            average2.style.color = 'yellow';
+            average3.style.color = 'yellow';
+            average4.style.color = 'yellow';
+            average5.style.color = 'yellow';
+            average6.style.color = 'yellow';
+            average7.style.color = 'yellow';
+            average8.style.color = 'yellow';
+            average9.style.color = 'yellow';
+            average10.style.color = 'yellow';
+        } else if (obj.average >= 22 && obj.average < 23) {
+            average.style.color = 'orange';
+            average2.style.color = 'orange';
+            average3.style.color = 'orange';
+            average4.style.color = 'orange';
+            average5.style.color = 'orange';
+            average6.style.color = 'orange';
+            average7.style.color = 'orange';
+            average8.style.color = 'orange';
+            average9.style.color = 'orange';
+            average10.style.color = 'orange';
+        } else if (obj.average >= 21 && obj.average < 22) {
+            average.style.color = 'darkblue';
+            average2.style.color = 'darkblue';
+            average3.style.color = 'darkblue';
+            average4.style.color = 'darkblue';
+            average5.style.color = 'darkblue';
+            average6.style.color = 'darkblue';
+            average7.style.color = 'darkblue';
+            average8.style.color = 'darkblue';
+            average9.style.color = 'darkblue';
+            average10.style.color = 'darkblue';
+        }
+
+        document.getElementById('average').textContent = obj.average;
+        document.getElementById('average2').textContent = obj.average;
+        document.getElementById('average3').textContent = obj.average;
+        document.getElementById('average4').textContent = obj.average;
+        document.getElementById('average5').textContent = obj.average;
+        document.getElementById('average6').textContent = obj.average;
+        document.getElementById('average7').textContent = obj.average;
+        document.getElementById('average8').textContent = obj.average;
+        document.getElementById('average9').textContent = obj.average;
+        document.getElementById('average10').textContent = obj.average;
+    }
+
+    setInterval(() => {
+        alertaTempMacho();
+    }, 1000);
+
+    function alertaTempFemea() {
+        var temperaturaFemea = (Math.random() * 9) + 28;
+        averageFe.innerHTML = temperaturaFemea;
+    }
+
+</script>
