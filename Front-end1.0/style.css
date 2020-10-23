@@ -36,7 +36,7 @@
 
 .traco_box {
     height: 3px;
-    width: 45%;
+    width: 20%;
     background: linear-gradient(45deg, #9ee674, #8eca18);
  
     margin: 15px 0px 13px 82px;
@@ -425,16 +425,19 @@ margin: 0px 0px 0px 0px;
 /* CALCULADORA */
 
 /*INICIO VALORES*/
-.titulo-valores{
 
-font-size: 57px;
-margin: -90px 0px 22px 0px;
-color: #1EC19D;
+.titulo-valores {
+    font-size: 57px;
+    color: black;
+    font-weight: 100;
+        margin: 35px 0 -7px;
 }
 
 .box {
     overflow: auto;
     margin-left:0;
+    border-bottom: 1px solid rgba(144, 144, 144, 0.25);
+    border-top: 1px solid rgba(144, 144, 144, 0.25);
     }
     
     .box .box-item {
@@ -442,12 +445,13 @@ color: #1EC19D;
         text-align: center;
         width: 306px;
         float: left;
-        margin: 700px 100px 0 130px;
+        margin: 100px;
         color: #1EC19D;
     }
     
     .box img {
       height: 75px;
+      margin-top: 15px;
     }
     
     /*FIM VALORES*/
