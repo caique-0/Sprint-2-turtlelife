@@ -53,7 +53,7 @@
 .header {
     background: linear-gradient(45deg, #9ee674, #1ec1c4);
     width: 100%;
-    
+    position: fixed;
     z-index: 0;
 }
 
@@ -168,7 +168,7 @@
 
 /* PROJETO */
 .projeto{
-    overflow: auto;
+    overflow: hidden;
 }
 
 .projetotexto{
@@ -459,11 +459,14 @@ margin: 0px 0px 0px 0px;
 /* FOOTER */
 .footer{
     height: 70px;
+    width: 100.76vw;
     background: linear-gradient(45deg, #9ee674, #1ec1c4);
     text-align: center;
     align-items: center;
     flex-direction: row;
-    margin-top: -1.2%;
+    margin-top: 0%;
+    margin-left: -15%;
+    position: relative;
     }
     
     .footer h3 {
