@@ -9,6 +9,8 @@ html, body {
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap);
     
     body {
+        margin: 0;
+        padding: 0;
       font-family: 'Montserrat', sans-serif;
     }
 
@@ -23,6 +25,8 @@ html, body {
 .header {
     background: linear-gradient(45deg, #9ee674, #1ec1c4);
     width: 100%;
+    z-index: 0;
+
 }
 
 .header h1 {
@@ -32,11 +36,11 @@ html, body {
 .titulo{
     margin-top: 17px;
     color: White;
-    margin: 15px -144px 20px 144px;
+
 }
 
 .logo_turtle {
-    margin: 6px 0px -50px -223px;
+    margin: 0px 0px -60px -220px;
     height: 65px;
 }
 /* MENU */
@@ -53,7 +57,7 @@ html, body {
 
 .nav li {
     display: inline-block;
-    padding: 20px 20px 0px 20px;
+    padding: 10px 20px 0px 20px;
 }
 
 /* Em btnInstituicao está ta a estilização do Botão "Instituição" */
@@ -164,6 +168,7 @@ html, body {
 	top: 0; /* Distância do topo do elemento pai (ou da janela, por causa do position sticky) */
     background: url("img/tartarugaCal.jpeg") no-repeat center top; /* Imagem de fundo que não se repete, alinhada ao centro no eixo X e ao topo no eixo Y */
 	background-position: cover; /* Sempre preenche todo o fundo do elemento  */
+    margin: -6px -16px -1px -1px;
 }
 
 /* FOOTER */
