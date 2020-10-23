@@ -17,9 +17,10 @@
     height: 70px;
 
 }
+
 .icone {
 
-height: 50px;
+    height: 50px;
 
 }
 
@@ -158,9 +159,8 @@ height: 50px;
 }
 
 /* PROJETO */
-#projeto{
-    width: 100%;
-    background-color: #fff;
+.projeto{
+    overflow: auto;
 }
 
 .projetotexto{
@@ -193,15 +193,12 @@ height: 50px;
     margin: -104px -165px -124px;
 }
 
-
-
-
 .projetotexto h1 {
     font-size: 30px;
 }
 
 .box-turtle{
-    height:165px;
+
     width: 100%;
     background-color:transparent;
     margin-top: 0%;
@@ -224,7 +221,6 @@ height: 50px;
 }
 
 .text-box-turtle{
-    height:300px;
     width:65%;
     float:left;
     margin: 220px 0px 0px 0px;   
@@ -261,7 +257,6 @@ height: 50px;
 }
 
 .box1{
-    height:30%;
     width: 100%;
     background-color:transparent;
     align-items: center;
@@ -296,7 +291,6 @@ h4{
 }
 
 .sub-box2{
-    height:90%;
     width:50%;
     background-color:transparent;
     float:left;
@@ -306,7 +300,6 @@ h4{
 }
 
 .box2{
-    height:30%;
     width: 100%;
     background-color:transparent;
     align-items: center;
@@ -315,7 +308,6 @@ h4{
 }
 
 .sub-box3{
-    height:90%;
     width:50%;
     background-color:transparent;
     float:left;
@@ -324,7 +316,6 @@ h4{
 }
 
 .sub-box4{
-    height:90%;
     width:500px;
     background-color:transparent;
     float:left;
@@ -342,7 +333,6 @@ h4{
 }
 
 .box3{
-    height:30%;
     width: 100%;
     background-color:transparent;
     align-items: center;
@@ -351,7 +341,6 @@ h4{
 }
 
 .sub-box5{
-    height:90%;
     width:60%;
     background-color:transparent;
     float:left;
@@ -359,7 +348,6 @@ h4{
 }
 
 .sub-box6{
-    height:90%;
     width:50%;
     background-color: transparent;
     float: right;
@@ -387,7 +375,6 @@ h4{
     margin-top: 21px;
 }
 .box-time{
-    height:50%;
     width: 100%;
     text-align:center;
     display:flex;
@@ -407,7 +394,7 @@ h4{
     height:75%;
     width:90%;
     margin-left:5%;
-    border-radius:50%;
+    border-radius:100%;
 }
 
 .aimg{
