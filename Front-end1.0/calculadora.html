@@ -8,34 +8,32 @@
 </head>
 <body>
 <!-- HEADER -->
-<div class="header">
-    <div class="container">
-        <div class="title-header">
-            <h1 class="titulo">TurtleLife</h1>
-            <img class="logo_turtle" src="img/logo.png" alt="logo">
-            
-        </div>
+    <div class="header">
+        <div class="container1">
+            <div class="title-header">
+                <h1 class="titulo">TurtleLife</h1>
+            </div>
 <!-- MENU -->
-        <div class="nav">
-            <ul>
-                <li class="li_menu">
-                    <a href="index.html">Home</a></li class="li_menu">
-                <li class="li_menu"><a href="sobrenos.html">Sobre nós</a>
-                </li>
-                <li class="li_menu"><a href="Projeto.html">Projeto</a>
-                </li>
-                <li class="li_menu"><a href="Equipe.html">Equipe</a>
-                </li>
-                <li class="li_menu"><a href="calculadora.html">Calculadora</a>
-                </li>
-                <li class="li_menu"><a href="grafico.html"></a>
-                </li>
-                <li class="li_menu"><a href="login.html">Login</a>
-                </li>
-            </ul>
+            <div class="nav">
+                <ul>
+                    <li class="li_menu"><a href="index.html">Home</a>
+                    </li>
+                    <li class="li_menu"><a href="index.html">Sobre nós</a>
+                    </li>
+                    <li class="li_menu"><a href="index.html">Projeto</a>
+                    </li>
+                    <li class="li_menu"><a href="index.html">Time</a>
+                    </li>
+                    <li class="li_menu"><a href="#calculadora">Calculadora</a>
+                    </li>
+                    <li class="li_menu"><a href="grafico.html">Gráfico</a>
+                    </li>
+                    <li class="li_menu"><a href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
     <section class="container">
         <div class="duas-colunas">
             <div class="turtle-image"></div> <!-- Essa DIV eu criei para a coluna que ficará a esquerda da página com a imagem, e a class é para linkar esse campo com a estilização no css -->
@@ -54,15 +52,11 @@
                 
                 <br/><hr><br/>
 					
-                    <p class="textoEscuro">Como Instituto de preservação da vida animal, sugerimos que faça abaixo uma simulação para calcular
-                    a porcentagem de machos e fêmeas que podem nascer de acordo com a quantidade de ovos na incubação. Assim
-                    poderá ter uma noção de como é possível ter controle dos sexos de ovos incubados!</p><br>
+                    <p class="textoEscuro">Sugerimos que faça abaixo uma simulação para calcular o valor necessário para investir em nosso projeto.</p><br>
 
                     <div style="text-align: center;">
-                        <input type="text" id="total" class="labelAmbiental" placeholder="Informe a quantidade total de ovos na incubação"> <br/><br/>
-                        <input type="text" id="femea" class="labelAmbiental" placeholder="Informe a quantidade de ovos que eclodiram de fêmeas:"> <br/><br/>
-                        <input type="text" id="macho" class="labelAmbiental" placeholder="Informe a quantidade de ovos que eclodiram de machos:"><br/><br/>
-                        
+                        <input type="text" id="total" class="labelAmbiental" placeholder="Informe a quantidade total de ovos"> <br/><br/>
+                        <input type="text" id="sexo" class="labelAmbiental" placeholder="Informe o sexo pretendido"> <br/><br/>                        
                         <button onclick="simular()" class="btnSimular">Simular</button>
                         <br/><br>   
 
@@ -88,23 +82,63 @@
             
         </div>
     </section>
-    <div class="footer">
-        <div class="container-footer">
-            <h3>© Copyright <strong>TurtleLife</strong>. Todos os direitos reservados</h3>
-        </div>
 </body>
-
+<div class="footer">
+    <div class="container1">
+        <h3>© Copyright <strong>TurtleLife</strong>. Todos os direitos reservados</h3>
+    </div>
+</div>
 </html>
 
 <script>
-
+    
+ 
     function simular(){
+        var mao_de_obra = 2000;
+        var valor_sensor = 40;
 
-        var fem = ((femea.value / total.value) * 100);
-        var mac = ((macho.value / total.value) * 100);
-
-        um.innerHTML = (`<br>A porcentagem de fêmeas é igual a: ${fem}%`);
-        um.innerHTML += (`<br>A porcentagem de macho é igual a: ${mac}%`);
+        if (total.value > 150 && total.value <= 300) {
+            um.innerHTML = `O recomendado é de que cada incubadora possua no máximo 150 ovos, como você deseja ${total.value} ovos,
+            é recomendado usar 2 incubadoras. Com aproximadamente 90% de chance para o nascimento de ${total.value} ${sexo.value}s.
+            Sendo assim, o valor necessário para investimento é de ${mao_de_obra + (valor_sensor * 2)}`;
+        } else if (total.value > 300 && total.value <= 450) {
+            um.innerHTML = `O recomendado é de que cada incubadora possua no máximo 150 ovos, como você deseja ${total.value} ovos,
+            é recomendado usar 3 incubadoras. Com aproximadamente 90% de chance para o nascimento de ${total.value} ${sexo.value}s.
+            Sendo assim, o valor necessário para investimento é de ${mao_de_obra + (valor_sensor * 3)}`;
+        } else if (total.value > 450 && total.value <=600) {
+            um.innerHTML = `O recomendado é de que cada incubadora possua no máximo 150 ovos, como você deseja ${total.value} ovos,
+            é recomendado usar 4 incubadoras. Com aproximadamente 90% de chance para o nascimento de ${total.value} ${sexo.value}s.
+            Sendo assim, o valor necessário para investimento é de ${mao_de_obra + (valor_sensor * 4)}`;
+        } else if (total.vlalue > 600 && total.value <= 750) {
+            um.innerHTML = `O recomendado é de que cada incubadora possua no máximo 150 ovos, como você deseja ${total.value} ovos,
+            é recomendado usar 5 incubadoras. Com aproximadamente 90% de chance para o nascimento de ${total.value} ${sexo.value}s.
+            Sendo assim, o valor necessário para investimento é de ${mao_de_obra + (valor_sensor * 5)}`;
+        } else if (total.value > 750 && total.value <= 1000) {
+            um.innerHTML = `O recomendado é de que cada incubadora possua no máximo 150 ovos, como você deseja ${total.value} ovos,
+            é recomendado usar 6 incubadoras. Com aproximadamente 90% de chance para o nascimento de ${total.value} ${sexo.value}s.
+            Sendo assim, o valor necessário para investimento é de ${mao_de_obra + (valor_sensor * 6)}`;
+        } else if (total.value > 1000 && total.value <= 1150) {
+            um.innerHTML = `O recomendado é de que cada incubadora possua no máximo 150 ovos, como você deseja ${total.value} ovos,
+            é recomendado usar 7 incubadoras. Com aproximadamente 90% de chance para o nascimento de ${total.value} ${sexo.value}s.
+            Sendo assim, o valor necessário para investimento é de ${mao_de_obra + (valor_sensor * 7)}`;
+        } else if (total.value > 1150 && total.value <= 1300) {
+            um.innerHTML = `O recomendado é de que cada incubadora possua no máximo 150 ovos, como você deseja ${total.value} ovos,
+            é recomendado usar 8 incubadoras. Com aproximadamente 90% de chance para o nascimento de ${total.value} ${sexo.value}s.
+            Sendo assim, o valor necessário para investimento é de ${mao_de_obra + (valor_sensor * 8)}`;
+        } else if (total.value > 1300 && total.value <= 1450) {
+            um.innerHTML = `O recomendado é de que cada incubadora possua no máximo 150 ovos, como você deseja ${total.value} ovos,
+            é recomendado usar 9 incubadoras. Com aproximadamente 90% de chance para o nascimento de ${total.value} ${sexo.value}s.
+            Sendo assim, o valor necessário para investimento é de ${mao_de_obra + (valor_sensor * 9)}`;
+        } else if (total.value > 1450) {
+            um.innerHTML = `O recomendado é de que cada incubadora possua no máximo 150 ovos, como você deseja ${total.value} ovos,
+            é recomendado usar mais que 10 incubadoras. Com aproximadamente 90% de chance para o nascimento de ${total.value} ${sexo.value}s.
+            Sendo assim, o valor necessário para investimento é de ${mao_de_obra + (valor_sensor * 10)}`;
+        }
+         else {
+            um.innerHTML = `O recomendado é de que cada incubadora possua no máximo 150 ovos, como você deseja ${total.value} ovos,
+            é recomendado usar 1 incubadora. Com aproximadamente 90% de chance para o nascimento de ${total.value} ${sexo.value}s.
+            Sendo assim, o valor necessário para investimento é de ${mao_de_obra + valor_sensor}`;
+        }
     }
 
     function calcular(){
