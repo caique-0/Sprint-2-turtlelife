@@ -34,6 +34,14 @@
     margin: auto;
 }
 
+.traco_box {
+    height: 3px;
+    width: 45%;
+    background: linear-gradient(45deg, #9ee674, #8eca18);
+ 
+    margin: 15px 0px 13px 82px;
+}
+
 .traco {
     height: 3px;
     width:20%;
@@ -238,7 +246,7 @@
 
 .title-text{
     font-weight: initial;
-    color:red;
+    color:#1EC19D ;
         
 }
 
@@ -390,6 +398,12 @@ h4{
     float:left;
 }
 
+
+.equipe{
+height: 515px;
+margin: 0px 0px 0px 0px;
+
+}
 .img-time{
     height:75%;
     width:90%;
@@ -411,21 +425,29 @@ h4{
 /* CALCULADORA */
 
 /*INICIO VALORES*/
+.titulo-valores{
+
+font-size: 57px;
+margin: -90px 0px 22px 0px;
+color: #1EC19D;
+}
+
 .box {
     overflow: auto;
     margin-left:0;
     }
     
     .box .box-item {
-    text-align: center;
-    width: 306px;
-    float: left;
-    margin: 370px 100px 0 100px;
-    color: white;
+        font-size: 22px;
+        text-align: center;
+        width: 306px;
+        float: left;
+        margin: 700px 100px 0 130px;
+        color: #1EC19D;
     }
     
     .box img {
-      height: 100px;
+      height: 75px;
     }
     
     /*FIM VALORES*/
