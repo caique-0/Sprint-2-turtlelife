@@ -443,7 +443,7 @@ margin: 0px 0px 0px 0px;
     .box .box-item {
         font-size: 22px;
         text-align: center;
-        width: 306px;
+        width: 205px;
         float: left;
         margin: 100px;
         color: #1EC19D;
@@ -459,7 +459,7 @@ margin: 0px 0px 0px 0px;
 /* FOOTER */
 .footer{
     height: 70px;
-    width: 100.76vw;
+    width: 113.76vw;;
     background: linear-gradient(45deg, #9ee674, #1ec1c4);
     text-align: center;
     align-items: center;
