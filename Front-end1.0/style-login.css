@@ -7,6 +7,7 @@
     
     body {
       font-family: 'Montserrat', sans-serif;
+      background-color: #E9F0F0;
     }
 
 /*HEADER*/
@@ -20,6 +21,8 @@ height: 70px;
 .header {
 background: linear-gradient(45deg, #9ee674, #1ec1c4); /* DEIXAR O DEGRADÊ NO MENU*/
 width: 100%;
+position: fixed;
+z-index: 1;
 }
 
 .header h1 {
@@ -123,6 +126,8 @@ input{
 
 #back-turtle{
     width: 80%;
+    z-index: 0;
+    margin: 45px 0px 0px 0px;
 }
 
 #container-img{

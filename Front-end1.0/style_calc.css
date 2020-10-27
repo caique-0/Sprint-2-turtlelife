@@ -13,6 +13,7 @@ html, body {
     
     body {
       font-family: 'Montserrat', sans-serif;
+      background-color: #E9F0F0;
     }
 
     .icone {
@@ -30,7 +31,8 @@ html, body {
 .header {
     background: linear-gradient(45deg, #9ee674, #1ec1c4);
     width: 100%;
-    z-index: 0;
+    z-index: 1;
+    position: fixed;
 
 }
 
@@ -139,6 +141,7 @@ html, body {
     color: #404040; /* cor do texto */
     text-align: center; /* text-align é para alinhar o texto, aqui eu centralizei */
     font-size: 17px; /* tamanho da fonte do texto */
+    margin-top: 30px;
 }
 
 /* Em textoMedio estilizei onde eu queria uma cor mais média nos textos, são os mesmo parametros de cima */
@@ -173,6 +176,7 @@ html, body {
     background: url("img/tartarugaCal.jpeg") no-repeat center top; /* Imagem de fundo que não se repete, alinhada ao centro no eixo X e ao topo no eixo Y */
 	background-position: cover; /* Sempre preenche todo o fundo do elemento  */
     margin: 0px -16px -1px -1px;
+    z-index: 0;
 }
 
 /* FOOTER */
