@@ -74,7 +74,7 @@ div#form{
     margin-top: -4px;
     margin-left: 38%;
     font-family: 'Poppins', sans-serif; /*FONTE DA TELA DE LOGIN TIRADA DO GOOGLE FONTS*/
-    font-size: 21px;
+    font-size: 25px;
 }
 
 input{
@@ -99,9 +99,17 @@ input{
 
 #btn-cadastro{
     margin: 10px 0px;
-    margin-left: 6px;
+    margin-left: 60px;
     padding: 0;
+    text-decoration: none;
+    font-style: none;
+
 }   
+
+#btn-cadastro a{
+    text-decoration: none;
+    color: white;
+}  
 
 .btns{
     width: 140px;

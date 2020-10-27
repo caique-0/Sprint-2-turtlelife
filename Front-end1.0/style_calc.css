@@ -1,6 +1,9 @@
 /*  */
 
-
+* {
+    margin: 0;
+    padding: 0;
+}
 html, body {
 	height: 100%; /*  */
 }
@@ -9,11 +12,13 @@ html, body {
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap);
     
     body {
-        margin: 0;
-        padding: 0;
       font-family: 'Montserrat', sans-serif;
     }
 
+    .icone {
+
+        height: 50px;
+    }
 
 .container1 {
     width: 80%;
@@ -47,7 +52,6 @@ html, body {
 .nav {
     margin-top: 7px;
     float: right;
-    margin: -7px 0px 0px 537px;
 }
 
 .nav a {
@@ -168,7 +172,7 @@ html, body {
 	top: 0; /* Distância do topo do elemento pai (ou da janela, por causa do position sticky) */
     background: url("img/tartarugaCal.jpeg") no-repeat center top; /* Imagem de fundo que não se repete, alinhada ao centro no eixo X e ao topo no eixo Y */
 	background-position: cover; /* Sempre preenche todo o fundo do elemento  */
-    margin: -6px -16px -1px -1px;
+    margin: 0px -16px -1px -1px;
 }
 
 /* FOOTER */

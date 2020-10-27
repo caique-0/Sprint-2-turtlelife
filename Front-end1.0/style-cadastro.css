@@ -93,13 +93,19 @@ input{
 }
 
 #btn{
-    margin: 9px 15px 0px -7px;
+    margin: 9px 15px 0px -3px;
     padding: 6px;
 }
 
+.btns a{
+    text-decoration: none;
+    color:white;
+}
+
+
 #btn-cadastro{
     margin: 10px 0px;
-    margin-left: 65px;
+    margin-left: 50px;
     padding: 0;
 }   
 
@@ -112,6 +118,7 @@ input{
     cursor: pointer; /*DEIXAR O CURSOR COM AQUELA MÃOZINHA QUANDO PASSA POR CIMA DOS BOTÕES*/
     border-radius: 5px; /*DEIXAR OS BOTÕES COM BORDA ARREDONDADA*/
 }
+
 
 #back-turtle{
     width: 80%;

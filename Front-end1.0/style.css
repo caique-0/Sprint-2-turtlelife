@@ -21,7 +21,6 @@
 .icone {
 
     height: 50px;
-
 }
 
 .logo_turtle {
@@ -121,7 +120,7 @@
     align-items: center;
     text-align: center;
     flex-direction: row;
-    padding-top: 30px;
+    padding-top: 137px;
 }
 
 #sobre h1 {
@@ -231,7 +230,7 @@
 .text-box-turtle{
     width:65%;
     float:left;
-    margin: 220px 0px 0px 0px;   
+    margin: 220px 0px 55px 0px;   
 }
 
 .text-box-turtle h2 {
@@ -401,8 +400,8 @@ h4{
 
 .equipe{
 height: 515px;
-margin: 0px 0px 0px 0px;
-
+margin: 60px 0px 0px 0px;
+padding: 15px;
 }
 .img-time{
     height:75%;
@@ -427,53 +426,52 @@ margin: 0px 0px 0px 0px;
 /*INICIO VALORES*/
 
 .titulo-valores {
-    font-size: 57px;
+    font-size: 45px;
     color: black;
     font-weight: 100;
-        margin: 35px 0 -7px;
+    margin: 172px 0px -10px 0px;;
 }
 
 .box {
     overflow: auto;
-    margin-left:0;
-    border-bottom: 1px solid rgba(144, 144, 144, 0.25);
-    border-top: 1px solid rgba(144, 144, 144, 0.25);
+    margin-left:190px;
+  
     }
     
     .box .box-item {
-        font-size: 22px;
+        font-size: 20px;
         text-align: center;
-        width: 205px;
+        width: 200px;
         float: left;
-        margin: 100px;
+        margin: 30px 99px 7px -40px;
         color: #1EC19D;
     }
     
     .box img {
-      height: 75px;
-      margin-top: 15px;
+      height: 65px;
+      margin-top: 10px;
     }
-    
+
+    .p-valores{
+font-style: italic;
+    }
     /*FIM VALORES*/
 
 /* FOOTER */
 .footer{
     height: 70px;
-    width: 113.76vw;;
     background: linear-gradient(45deg, #9ee674, #1ec1c4);
     text-align: center;
     align-items: center;
     flex-direction: row;
-    margin-top: 0%;
-    margin-left: -15%;
-    position: relative;
+    margin-top: -1.2%;
     }
     
     .footer h3 {
     color: white;   
     font-size: 14px;
     margin-left: 0;
-    margin-top: 20px;
+    margin-top: 16px;
     padding-top: 2.5%;
     }
     
