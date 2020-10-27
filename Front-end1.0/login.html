@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Backend - Sprint 2/">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <title>Login</title>
@@ -68,14 +69,12 @@
 </html>
 <script>
     function validarLogin(){
-          if(input_email.value.indexOf("@") == -1 || input_email.value.indexOf(".") == -1){
-            input_email.style.border = "solid 1px #e32636";
+          if(input_email.value == "admin" && input_senha.value == "admin"){
+            alert("Logado com sucesso. Seja Bem-Vindo.")
+            window.location.href = `../Backend - Sprint 2/dashboard-turtle-life/dashboard-turtle-life.html`;
+          }else {
+            alert("Usuário ou senha incorreto. Tente novamente")
           }
-
-          if(input_senha.value.length < 6){
-            input_senha.style.border = "solid 1px #e32636";
-          }
-
     }
   
 </script>
