@@ -25,7 +25,7 @@
                     </li>
                     <li class="li_menu"><a href="Equipe.html">Equipe</a>
                     </li>
-                    <li class="li_menu"><a href="#calculadora">Calculadora</a>
+                    <li class="li_menu"><a href="calculadora.html">Calculadora</a>
                     </li>
                     <li class="li_menu"><a href="login.html">Login</a>
                     </li>
@@ -55,7 +55,7 @@
 
                     <div style="text-align: center;">
                         <input type="text" id="total" class="labelAmbiental" placeholder="Informe a quantidade total de ovos"> <br/><br/>
-                        <input type="text" id="sexo" class="labelAmbiental" placeholder="Informe o sexo pretendido"> <br/><br/>                        
+                        <input type="text" id="sexo" class="labelAmbiental" placeholder="Informe o sexo pretendido(Macho ou Fêmea)"> <br/><br/>                        
                         <button onclick="simular()" class="btnSimular">Simular</button>
                         <br/><br>   
 
@@ -84,7 +84,7 @@
 </body>
 <div class="footer">
     <div class="container1">
-        <h3>© Copyright <strong>TurtleLife</strong>. Todos os direitos reservados</h3>
+        <h3>© Copyright <b>TurtleLife</b>. Todos os direitos reservados</h3>
     </div>
 </div>
 </html>
@@ -110,7 +110,7 @@
             um.innerHTML = `O recomendado é de que cada incubadora possua no máximo 150 ovos, como você deseja ${total.value} ovos,
             é recomendado usar 4 incubadoras. Com aproximadamente 90% de chance para o nascimento de ${total.value} ${sexo.value}s.
             Sendo assim, o valor necessário para investimento é de ${mao_de_obra + (valor_sensor * 4)}`;
-        } else if (total.vlalue > 600 && total.value <= 750) {
+        } else if (total.value > 600 && total.value <= 750) {
             um.innerHTML = `O recomendado é de que cada incubadora possua no máximo 150 ovos, como você deseja ${total.value} ovos,
             é recomendado usar 5 incubadoras. Com aproximadamente 90% de chance para o nascimento de ${total.value} ${sexo.value}s.
             Sendo assim, o valor necessário para investimento é de ${mao_de_obra + (valor_sensor * 5)}`;
@@ -149,8 +149,8 @@
         var prejuizo = (0.4 * rendaMensal.value);
         var lucro = (0.3 * rendaMensal.value);
 
-        div_femea.innerHTML = (`Seu <strong>lucro</strong> mensal, caso invista na preservação de tartarugas, a longo prazo será de: R$ ${lucro}`);
-        div_macho.innerHTML += (`<br>Seu <strong>prejuízo</strong> mensal, caso não invista na preservação de tartarugas, a longo prazo será de: R$ ${prejuizo}`);
+        div_femea.innerHTML = (`Seu <b>lucro</b> mensal, caso invista na preservação de tartarugas, a longo prazo será de: R$ ${lucro}`);
+        div_macho.innerHTML += (`<br>Seu <b>prejuízo</b> mensal, caso não invista na preservação de tartarugas, a longo prazo será de: R$ ${prejuizo}`);
     }
 	
 </script>
