@@ -1,5 +1,6 @@
 const express = require('express');
 const { ArduinoDataTemp } = require('./newserial')
+const { ArduinoDataTempII } = require('./serialTemperature')
 const { ArduinoDataHumidity } = require('./serialHumidity')
 const { ArduinoDataSwitch } = require('./serialSwitch')
 const { ArduinoDataLuminosity} = require('./serialLuminosidity')
@@ -20,6 +21,24 @@ router.get('/', (request, response, next) => {
 		dataHour: ArduinoDataTemp.ListHour,
 		totalHour: ArduinoDataTemp.ListHour.length,
 		averageHour: isNaN(averageHour) ? 0 : averageHour
+    });
+
+});
+
+router.get('/temperature', (request, response, next) => {
+
+    let sum = ArduinoDataTempII.List.reduce((a, b) => a + b, 0);
+    let averageFe = (sum / ArduinoDataTempII.List.length).toFixed(2);
+	let sumHour = ArduinoDataTempII.ListHour.reduce((a, b) => a + b, 0);
+	let averageFeHour = (sumHour / ArduinoDataTempII.ListHour.length).toFixed(2);
+
+    response.json({
+        data: ArduinoDataTempII.List,
+        total: ArduinoDataTempII.List.length,
+        averageFe: isNaN(averageFe) ? 0 : averageFe,
+		dataHour: ArduinoDataTempII.ListHour,
+		totalHour: ArduinoDataTempII.ListHour.length,
+		averageFeHour: isNaN(averageFeHour) ? 0 : averageFeHour
     });
 
 });

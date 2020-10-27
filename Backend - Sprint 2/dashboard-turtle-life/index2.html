@@ -3,6 +3,7 @@
 
 <head>
 	<title>Line Chart</title>
+	<link rel="stylesheet" href="./CSS/grafico.css">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 	<script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
@@ -22,14 +23,51 @@
 </head>
 
 <body>
-	<div>
-		<h1>TARTARUGAS MARINHAS MACHOS</h1>
+	<div class="menu-upbar">
+		<div class="div_logo">
+			<img src="./Imagens/logo41.png" alt="">
+			<p>DASHBOARD AREA</p>
+		</div>
+	</div>
+	<input type="checkbox" id="check" checked>
+	<div class="menu-sidebar">
+		<label for="check">
+			<div id="menu" onclick="menu()">
+				<div id="bar1" class="bar"></div>
+				<div id="bar2" class="bar"></div>
+				<div id="bar3" class="bar"></div>
+			</div>
+		</label>
+		<a href="dashboard-turtle-life.html"><img src="./Imagens/grafico.png" alt="">
+			<div class="ajustes">Dashboard</div>
+		</a>
+		<a href=""><img src="./Imagens/usuario-de-perfil.png" alt="">
+			<div class="ajustes">Perfil</div>
+		</a>
+		<a href=""><img src="./Imagens/analytics.png" alt="">
+			<div class="ajustes">Analytics</div>
+		</a>
+		<a href=""><img src="./Imagens/apoio-suporte.png" alt="">
+			<div class="ajustes">Suporte</div>
+		</a>
+		<a href=""><img src="./Imagens/bolsa-de-dinheiro.png" alt="">
+			<div class="ajustes">Financeiro</div>
+		</a>
+		<a href=""><img src="./Imagens/configuracoes.png" alt="">
+			<div class="ajustes">Configurações</div>
+		</a>
+		<a href=""><img src="./Imagens/sair.png" alt="">
+			<div class="ajustes">Logout</div>
+		</a>
+	</div>
+
+	<div class="grafico_dashboard">
+		<h1>TARTARUGAS MARINHAS FÊMEAS</h1>
 		<section>
-			<h2>Temperatura: <label id='averageFe'>0.00</label></h2>
+			<h2>Temperatura: <label id='average'>0.00</label></h2>
 		</section>
-		<section style="width:70%">
+		<section style="width:80%">
 			<canvas id="chart"></canvas>
-			<section>
 	</div>
 
 	<script>
@@ -82,10 +120,10 @@
 		this.lastIndexTemp = 0;
 		this.time = 0;
 
-		function get_data() {
+		function get_dataII() {
 
 			var http = new XMLHttpRequest();
-			http.open('GET', 'http://localhost:3000/api', false);
+			http.open('GET', 'http://localhost:3000/api/temperature', false);
 			http.send(null);
 
 			var obj = JSON.parse(http.responseText);
@@ -109,29 +147,29 @@
 				chart.update();
 			});
 
-			if (averageFe >= 36) {
-				averageFe.style.color = 'red';
-				alert(`Temperatura crítica! Está ${averageFe.toFixed(2)} favor controlar a temperatura`)
-			} else if (averageFe >= 35 && averageFe < 36) {
-				averageFe.style.color = 'darkorange';
-			} else if (averageFe >= 34 && averageFe < 35) {
-				averageFe.style.color = 'darkyellow';
-			} else if (averageFe >= 33 && averageFe < 34) {
-				averageFe.style.color = 'green';
-			} else if (averageFe >= 32 && averageFe < 33) {
-				averageFe.style.color = 'darkgreen';
-			} else if (averageFe >= 31 && averageFe < 32) {
-				averageFe.style.color = 'lightgreen';
-			} else if (averageFe >= 30 && averageFe < 31) {
-				averageFe.style.color = 'yellow';
-			} else if (averageFe >= 29 && averageFe < 30) {
-				averageFe.style.color = 'orange';
-			} else if (averageFe >= 28 && averageFe < 29) {
-				averageFe.style.color = 'darkblue';
+			if (average >= 36) {
+				average.style.color = 'red';
+				alert(`Temperatura crítica! Está ${average.toFixed(2)} favor controlar a temperatura`)
+			} else if (average >= 35 && average < 36) {
+				average.style.color = 'darkorange';
+			} else if (average >= 34 && average < 35) {
+				average.style.color = 'darkyellow';
+			} else if (average >= 33 && average < 34) {
+				average.style.color = 'green';
+			} else if (average >= 32 && average < 33) {
+				average.style.color = 'darkgreen';
+			} else if (average >= 31 && average < 32) {
+				average.style.color = 'lightgreen';
+			} else if (average >= 30 && average < 31) {
+				average.style.color = 'yellow';
+			} else if (average >= 29 && average < 30) {
+				average.style.color = 'orange';
+			} else if (average >= 28 && average < 29) {
+				average.style.color = 'darkblue';
 			}
 
-			document.getElementById('averageFe').textContent = obj.averageFe;
-			document.getElementById('averageHour').textContent = obj.averageHour;
+			document.getElementById('average').textContent = obj.averageFe;
+			document.getElementById('averageHour').textContent = obj.averageFeHour;
 		}
 
 		//Second Graphic
@@ -139,7 +177,7 @@
 
 
 		setInterval(() => {
-			get_data();
+			get_dataII();
 		}, 1000);
 
 	</script>

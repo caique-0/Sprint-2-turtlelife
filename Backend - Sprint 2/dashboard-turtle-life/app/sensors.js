@@ -7,6 +7,15 @@ function lm35(min, max) {
     return random
 }
 
+function lm35II(min, max) {
+    min = typeof min == 'undefined' ? 29 : min;
+    max = typeof max == 'undefined' ? 36 : max;
+    
+    var random = Math.random() * (max - min) + min;
+
+    return random
+}
+
 function trc5000() {
     min = 0;
     max = 1;
@@ -60,4 +69,4 @@ function dht11(options){
 }
 
 
-module.exports = {lm35, trc5000, ldr, dht11};
+module.exports = {lm35, lm35II, trc5000, ldr, dht11};
