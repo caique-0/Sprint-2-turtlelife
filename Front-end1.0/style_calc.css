@@ -123,7 +123,7 @@ html, body {
 }
 
 /* Em labelPesca é a estilização do campo de Input da simulação da Empresa de Pesca, são os mesmos parametros do de cima */
-.labelPesca{
+.labelPesca
     background-color: #E3E3E3;
     width: 180px;
     padding: 8px;
@@ -175,7 +175,7 @@ html, body {
 	top: 0; /* Distância do topo do elemento pai (ou da janela, por causa do position sticky) */
     background: url("img/tartarugaCal.jpeg") no-repeat center top; /* Imagem de fundo que não se repete, alinhada ao centro no eixo X e ao topo no eixo Y */
 	background-position: cover; /* Sempre preenche todo o fundo do elemento  */
-    margin: 0px -16px -1px -1px;
+    margin: 0px -16px -2px -1px;
     z-index: 0;
 }
 

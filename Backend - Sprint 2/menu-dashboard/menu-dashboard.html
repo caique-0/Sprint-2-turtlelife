@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./menu-dashboard.css">
+    <title>Document</title>
+</head>
+<body>
+
+    
+        <div class="menu-upbar">
+                <div class="div_logo">
+                    <img src="./Imagens/logo2.png" alt="">
+                    <p>DASHBOARD AREA</p>
+                </div>
+            </div>
+            <input type="checkbox" id="check" checked>
+            <div class="menu-sidebar">
+                <label for="check">
+                    <div id="menu" onclick="menu()">
+                        <div id="bar1" class="bar"></div>
+                        <div id="bar2" class="bar"></div>
+                        <div id="bar3" class="bar"></div>
+                    </div>
+                </label>
+                <a href="dashboard-turtle-life.html"><img src="./Imagens/grafico.png" alt="">
+                    <div class="ajustes">Dashboard</div>
+                </a>
+                <a href=""><img src="./Imagens/usuario-de-perfil.png" alt="">
+                    <div class="ajustes">Perfil</div>
+                </a>
+                <a href=""><img src="./Imagens/analytics.png" alt="">
+                    <div class="ajustes">Analytics</div>
+                </a>
+                <a href="suporte-dashboard.html"><img src="./Imagens/apoio-suporte.png" alt="">
+                    <div class="ajustes">Suporte</div>
+                </a>
+                <a href=""><img src="./Imagens/bolsa-de-dinheiro.png" alt="">
+                    <div class="ajustes">Financeiro</div>
+                </a>
+                <a href="Configuracoes.html"><img src="./Imagens/configuracoes.png" alt="">
+                    <div class="ajustes">Configurações</div>
+                    
+                </a>
+                <a href=""><img src="./Imagens/sair.png" alt="">
+                    <div class="ajustes">Logout</div>
+                </a>
+            </div>
+    
+</body>
+</html>
+<script>
+function menu() {
+        document.getElementById('menu').classList.toggle('change');
+    }
+</script>
