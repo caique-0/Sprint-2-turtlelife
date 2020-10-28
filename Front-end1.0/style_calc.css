@@ -120,6 +120,7 @@ html, body {
     background-color: #E3E3E3; /* cor de fundo do botão */
     width: 335px; /* largura do campo */
     padding: 8px; /* preenchimento do campo pra cima e pra baixo */
+    border-radius: 5px;
 }
 
 /* Em labelPesca é a estilização do campo de Input da simulação da Empresa de Pesca, são os mesmos parametros do de cima */
