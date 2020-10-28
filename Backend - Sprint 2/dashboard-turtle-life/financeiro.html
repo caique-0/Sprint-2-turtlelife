@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./CSS/financeiro.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="menu-upbar">
+        <div class="div_logo">
+            <img src="./Imagens/logo41.png" alt="">
+            <p>DASHBOARD AREA</p>
+        </div>
+    </div>
+    <input type="checkbox" id="check" checked>
+    <div class="menu-sidebar">
+        <label for="check">
+            <div id="menu" onclick="menu()">
+                <div id="bar1" class="bar"></div>
+                <div id="bar2" class="bar"></div>
+                <div id="bar3" class="bar"></div>
+            </div>
+        </label>
+        <a href="dashboard-turtle-life.html"><img src="./Imagens/grafico.png" alt="">
+            <div class="ajustes">Dashboard</div>
+        </a>
+        <a href="perfil.html"><img src="./Imagens/usuario-de-perfil.png" alt="">
+            <div class="ajustes">Perfil</div>
+        </a>
+        <a href="suporte-dashboard.html"><img src="./Imagens/apoio-suporte.png" alt="">
+            <div class="ajustes">Suporte</div>
+        </a>
+        <a href="financeiro.html"><img src="./Imagens/bolsa-de-dinheiro.png" alt="">
+            <div class="ajustes">Financeiro</div>
+        </a>
+        <a href="Configuracoes.html"><img src="./Imagens/configuracoes.png" alt="">
+            <div class="ajustes">Configurações</div>
+        </a>
+        <a href=".../Front-end1.0/index.html"><img src="./Imagens/sair.png" alt="">
+            <div class="ajustes">Logout</div>
+        </a>
+    </div>
+    <div class="fixo-financeiro">
+        <div class="titulo-financeiro">
+            <h1>Pagamento</h1>
+        </div>
+        <div class="escolha-financeiro">
+            <ul>
+                <li>
+                    <button class="btn_boleto" onclick="boleto()">Boleto</button>
+                </li>
+                <li>
+                    <button class="btn_cartao2" onclick="cartao()">Cartão</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="boletofinanceiro" class="boletofinanceiro" style="display: block">
+        <div class="titulo-boletos">
+            <ul>
+                <li>
+                    <h3>Boletos passados</h3>
+                </li>
+                <li>
+                    <h3 class="separacao">Boletos futuros</h3>
+                </li>
+            </ul>
+        </div>
+        <div class="boletos-passados">
+            <img src="./Imagens/BoletoBancario.png" alt="">
+            <h3>30/09/2020</h3>
+            <hr>
+            <img src="./Imagens/BoletoBancario.png" alt="">
+            <h3>30/08/2020</h3>
+            <hr>
+        </div>
+        <div class="boletos-futuros">
+            <img src="./Imagens/BoletoBancario.png" alt="">
+            <h3>30/10/2020</h3>
+            <hr>
+            <img src="./Imagens/BoletoBancario.png" alt="">
+            <h3>30/11/2020</h3>
+        </div>
+    </div>
+    <div id="cartaofinanceiro" class="cartaofinanceiro" style="display: none">
+        <div id="cartao" class="cartao">
+            <h3 class="selecionar">Selecione sua bandeira: </h3>
+            <form>
+                <input type="radio" name="opcoes" id="visa">
+                <img src="./Imagens/visa.png" alt="">
+
+                <input type="radio" name="opcoes" id="mastercard">
+                <img src="./Imagens/mastercard.png" alt="">
+
+                <input type="radio" name="opcoes" id="americanexpress">
+                <img src="./Imagens/americanexpress.png" alt="">
+
+                <input type="radio" name="opcoes" id="elo">
+                <img src="./Imagens/elo.png" alt="">
+        </div>
+        <form>
+            <button class="btn_cartao">Cartão de Débito</button>
+            <button class="btn_cartao1">Cartão de Crédito</button>
+            <div class="cartao-financeiro">
+                <div class="numero-cartao">
+                    <label for="numerocartao">
+                        <p>Número do Cartão:</p>
+                    </label>
+                    <input type="text" id="numerocartao" class="numerocartao" /><br><br>
+                </div>
+                <div class="cpf-cartao">
+                    <label id="cpf1" for="cpf">
+                        <p>CPF:</p>
+                    </label>
+                    <input type="number" id="cpf" class="cpf" /><br><br>
+                </div>
+
+                <div class="nome-cartao">
+                    <label id="nomecartao" for="nomecartao">
+                        <p>Nome do titular:</p>
+                    </label>
+                    <input type="text" id="nomecartao" class="nomecartao" /><br><br>
+                </div>
+
+                <div class="cvc-cartao">
+                    <label id="cvc" for="cvc">
+                        <p>CVC:</p>
+                    </label>
+                    <textarea id="cvc" cols="8" rows="1" class="input-padrao"></textarea><br><br>
+                </div>
+
+                <div class="validade-cartao">
+                    <label id="validade1" for="validade">
+                        <p>Validade:</p>
+                    </label>
+                    <textarea id="validade" cols="8" rows="1" class="input-padrao"></textarea><br><br>
+                </div>
+
+                <button class="btn_erros" onclick="ValidarErros()">Pagar</button><br><br>
+                <ul id="mensagemErro" class="m-erro"></ul>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
+<script>
+    function menu() {
+        document.getElementById('menu').classList.toggle('change');
+    }
+
+    function validaContato() {
+        var erros = [];
+
+        if (!numerocartao.value ||
+            numerocartao.value <= 15) {
+            erros.push("O cartão possui 16 números, por favor, tente novamente!");
+        }
+
+        if (!email.value ||
+            (email.value.search("@") == -1) ||
+            (email.value.search(".") == -1) ||
+            (email.value.search(" ") >= '')) {
+            erros.push("O formato do email é: usuario@dominio.com");
+        }
+
+        if (!validade.value) {
+            erros.push("Coloque a validade de seu cartão!")
+        }
+
+        if (!cpf.value ||
+            cpf.value <= 10) {
+            erros.push("O CPF possui 11 números, tente novamente!")
+        }
+
+        return erros;
+    }
+
+    function boleto() {
+        cartaofinanceiro.style.display = 'none';
+        boletofinanceiro.style.display = 'block';
+    }
+
+    function cartao() {
+        boletofinanceiro.style.display = 'none';
+        cartaofinanceiro.style.display = 'block';
+    }
+</script>

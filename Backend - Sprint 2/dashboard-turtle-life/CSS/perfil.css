@@ -151,41 +151,45 @@ label #menu:hover{
     display: none;
 }
 
-.dashboard-area img {
-    height: 100px;
+.imagem-dashboard img {
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    margin-left: 200px;
     cursor: pointer;
 }
 
-.dashboard-estado {
-    text-align: center;
+.perfil-dashboard {
+    padding-top: 100px;
+    margin-left: 400px;
+}
+
+.campos-dashboard input {
+    border: solid 0.5px black;
+    border-radius: 5px;
+}
+
+.sobrenome-dash{
+    margin-left: 200px;
+    margin-top: -61px;
+}
+
+.cpf-dash{
+    margin-left: 400px;
+    margin-top: -64px;
+}
+
+.email-dash, .telefone-dash, .endereco-dash {
+    margin-top: 30px;
+}
+
+.nome-dash input, .sobrenome-dash input, .telefone-dash input, .cpf-dash input {
+    height: 25px;
     width: 300px;
-    float: left;
-    margin-left: 130px;
-    margin-top: 100px;
 }
 
-.dashboard-estado .div_bordas {
-    border: 1px solid black;
-    height: 200px;
-    width: 300px;
+.email-dash input, .endereco-dash input {
+    height: 25px;
+    width: 700px;
 }
-
-.incubadora-img {
-    margin-bottom: 10px;
-}
-
-.incubadora-img {
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3;
-}
-
-.incubadora-img:hover {
-    -moz-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-}
-
-
-
 
