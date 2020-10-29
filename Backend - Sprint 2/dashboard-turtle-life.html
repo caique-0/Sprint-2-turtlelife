@@ -388,7 +388,7 @@
         var _lastIndexTemp = this.lastIndexTemp;
         this.lastIndexTemp = obj.data.length;
         listTemp = obj.data.slice(_lastIndexTemp);
-        if (averageFe >= 36) {
+        if (obj.averageFe >= 36) {
                 averageFe.style.color = 'red';
 				averageFe2.style.color = 'red';
 				averageFe3.style.color = 'red';
@@ -396,55 +396,55 @@
                 averageFe5.style.color = 'red';
                 
 				alert(`Temperatura crítica! Está ${average.toFixed(2)} favor controlar a temperatura`)
-			} else if (averageFe >= 35 && averageFe < 36) {
+			} else if (obj.averageFe >= 35 && obj.averageFe < 36) {
                 averageFe.style.color = 'darkorange';
                 averageFe2.style.color = 'darkorange';
 				averageFe3.style.color = 'darkorange';
 				averageFe4.style.color = 'darkorange';
 				averageFe5.style.color = 'darkorange';
 
-			} else if (averageFe >= 34 && averageFe < 35) {
+			} else if (obj.averageFe >= 34 && obj.averageFe < 35) {
                 averageFe.style.color = 'darkyellow';
                 averageFe2.style.color = 'darkyellow';
 				averageFe3.style.color = 'darkyellow';
 				averageFe4.style.color = 'darkyellow';
 				averageFe5.style.color = 'darkyellow';
 
-			} else if (averageFe >= 33 && averageFe < 34) {
+			} else if (obj.averageFe >= 33 && obj.averageFe < 34) {
                 averageFe.style.color = 'green';
                 averageFe2.style.color = 'green';
 				averageFe3.style.color = 'green';
 				averageFe4.style.color = 'green';
 				averageFe5.style.color = 'green';
 
-			} else if (averageFe >= 32 && averageFe < 33) {
+			} else if (obj.averageFe >= 32 && obj.averageFe < 33) {
                 averageFe.style.color = 'darkgreen';
                 averageFe2.style.color = 'darkgreen';
 				averageFe3.style.color = 'darkgreen';
 				averageFe4.style.color = 'darkgreen';
 				averageFe5.style.color = 'darkgreen';
 
-			} else if (averageFe >= 31 && averageFe < 32) {
+			} else if (obj.averageFe >= 31 && obj.averageFe < 32) {
                 averageFe.style.color = 'lightgreen';
                 averageFe2.style.color = 'lightgreen';
 				averageFe3.style.color = 'lightgreen';
 				averageFe4.style.color = 'lightgreen';
 				averageFe5.style.color = 'lightgreen';
 
-			} else if (averageFe >= 30 && averageFe < 31) {
+			} else if (obj.averageFe >= 30 && obj.averageFe < 31) {
                 averageFe.style.color = 'yellow';
                 averageFe2.style.color = 'yellow';
 				averageFe3.style.color = 'yellow';
 				averageFe4.style.color = 'yellow';
 				averageFe5.style.color = 'yellow';
 
-			} else if (averageFe >= 29 && averageFe < 30) {
+			} else if (obj.averageFe >= 29 && obj.averageFe < 30) {
                 averageFe.style.color = 'orange';
                 averageFe2.style.color = 'orange';
                 averageFe3.style.color = 'orange';
                 averageFe4.style.color = 'orange';
                 averageFe5.style.color = 'orange';
-			} else if (averageFe >= 28 && averageFe < 29) {
+			} else if (obj.averageFe >= 28 && obj.averageFe < 29) {
                 averageFe.style.color = 'darkblue';
                 averageFe2.style.color = 'darkblue';
                 averageFe3.style.color = 'darkblue';
