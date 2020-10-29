@@ -35,51 +35,24 @@
     </div>
     <section class="container">
         <div class="duas-colunas">
-            <div class="turtle-image"></div> <!-- Essa DIV eu criei para a coluna que ficará a esquerda da página com a imagem, e a class é para linkar esse campo com a estilização no css -->
+           <img src="img/tartaruga2.0.jpg" alt="" id='img-back'>
         </div>
-
         <div class="duas-colunas">
-            <div class="content">
-				<h2 class="titleCal">Calculadora de Impacto</h2>
-                <p class="textoEscuro">Sabemos que todo animal dentro da nossa biodiversidade tem sua importância, porem não paramos para 
-                    pensar em como afetam diretamente ou indiretamente nossa rotina ou empresa.</p>
-                    <p class="textoMedio">Você é uma:</p><br />
-                    <div style="text-align: center;">
-						<button onclick="instituicao()" class="btnInstituicao">Instituição</button>
-                    	<button onclick="pesca()" class="btnPesca">Empresa de Pesca</button>
-					</div>
-                
-                <br/><hr><br/>
-					
-                    <p class="textoEscuro">Sugerimos que faça abaixo uma simulação para calcular o valor necessário para investir em nosso projeto.</p><br>
-
+            
+            <br><br><br>
+<center>
+                    <p class="textoEscuro"><h1 style="color:#1EC19D; font-size:30px ;">Calculadora financeira</h1>
+                        <br><br>
+                        <h>Insira os dados que vamos calcular o valor necessário para investir em nosso projeto.</h></p><br>
                     <div style="text-align: center;">
                         <input type="text" id="total" class="labelAmbiental" placeholder="Informe a quantidade total de ovos"> <br/><br/>
                         <input type="text" id="sexo" class="labelAmbiental" placeholder="Informe o sexo pretendido(Macho ou Fêmea)"> <br/><br/>                        
                         <button onclick="simular()" class="btnSimular">Simular</button>
                         <br/><br>   
-
-                        <div id="um" class="textoMedio"></div> <br/>
+                        <div id="um" style="display: center;"></div>
                     </div>
-                <hr><br>
-					
-                    <p class="textoEscuro">Você sabia que as empresas de Pesca serão uma das principais afetadas na extinção de tartarugas?
-                    Isso porque elas são predadoras das águas-vivas (as águas-vivas são predadoras dos peixes), sem elas a escassez de peixes
-                    logo chegaria pois aumentaria drasticamente a quantidade de águas-vivas no oceano. Automaticamente sua empresa seria afetada
-                    e seu rendimento financeiro reduziria. Vamos ver quanto seria seu prejuizo e seu lucro na prática? </p><br>
-                    
-                    <div style="text-align: center;">
-                        <label class="textoMedio">Informe a sua renda mensal bruta: </label>
-                        <input type="text" id="rendaMensal" class="labelPesca" placeholder="Insira o valor da sua renda"> <br/><br/>
-
-                        <button onclick="calcular()" class="btnCalcular">Calcular</button><br/> <br/> 
-
-                        <div id="div_femea" class="textoMedio"></div> <br/>
-                        <div id="div_macho" class="textoMedio"></div>
-                    </div>
-			</div>
-            
-        </div>
+            </div>
+        </center>
     </section>
 </body>
 <div class="footer">
@@ -91,7 +64,6 @@
 
 <script>
     
- 
     function simular(){
         var mao_de_obra = 2000;
         var valor_sensor = 40;
@@ -140,17 +112,5 @@
             é recomendado usar 1 incubadora. Com aproximadamente 90% de chance para o nascimento de ${total.value} ${sexo.value}s.
             Sendo assim, o valor necessário para investimento é de R$${mao_de_obra + valor_sensor}`;
         }
-
-        
     }
-
-    function calcular(){
-
-        var prejuizo = (0.4 * rendaMensal.value);
-        var lucro = (0.3 * rendaMensal.value);
-
-        div_femea.innerHTML = (`Seu <b>lucro</b> mensal, caso invista na preservação de tartarugas, a longo prazo será de: R$ ${lucro}`);
-        div_macho.innerHTML += (`<br>Seu <b>prejuízo</b> mensal, caso não invista na preservação de tartarugas, a longo prazo será de: R$ ${prejuizo}`);
-    }
-	
 </script>

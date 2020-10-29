@@ -142,14 +142,8 @@ html, body {
     color: #404040; /* cor do texto */
     text-align: center; /* text-align é para alinhar o texto, aqui eu centralizei */
     font-size: 17px; /* tamanho da fonte do texto */
-    margin-top: 30px;
-}
-
-/* Em textoMedio estilizei onde eu queria uma cor mais média nos textos, são os mesmo parametros de cima */
-.textoMedio{
-    color: #6C6C6C;
-    font-size: 17px;
-    text-align: center;
+    margin-top: 160px;
+    
 }
 
 /* Em container  */
@@ -170,24 +164,20 @@ html, body {
 }
 
 /* Em turtle-image eu estilizei a div e a imagem que queria na coluna esquerda da página */
-.turtle-image {
-	height: 100vh; /* 100% da altura da janela (view height)  */
-	position: sticky; /* Position sticky determina que o elemento vai ter comportamento relativo à posição da janela */
-	top: 0; /* Distância do topo do elemento pai (ou da janela, por causa do position sticky) */
-    background: url("img/tartarugaCal.jpeg") no-repeat center top; /* Imagem de fundo que não se repete, alinhada ao centro no eixo X e ao topo no eixo Y */
-	background-position: cover; /* Sempre preenche todo o fundo do elemento  */
-    margin: 0px -16px -2px -1px;
-    z-index: 0;
+
+#img-back{
+    width: 50vw;
+    height: 88vh;
 }
 
 /* FOOTER */
 .footer{
-    height: 70px;
+    height: 80px;
     background: linear-gradient(45deg, #9ee674, #1ec1c4);
     text-align: center;
     align-items: center;
     flex-direction: row;
-    margin-top: -1.2%;
+    margin-top: -1.8%;
     }
     
     .footer h3 {
