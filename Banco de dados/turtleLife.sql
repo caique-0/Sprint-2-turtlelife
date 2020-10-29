@@ -3,12 +3,12 @@ use turtleLife;
                                          					
 create table cadastro (
 idcadastro int primary key auto_increment,
-nomeEmpresa varchar(50),
-email varchar(100),
+nomeEmpresa varchar(45),
+email varchar(45),
 telefone char(10),
 endereco varchar(60),
-senha varchar(50),
-tipoEmpresa varchar(60),
+senha varchar(45),
+tipoEmpresa varchar(45),
 cnpj char(14)
 );
 
