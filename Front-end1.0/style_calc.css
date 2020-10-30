@@ -168,6 +168,7 @@ html, body {
 #img-back{
     width: 50vw;
     height: 88vh;
+    margin-top: 14px;
 }
 
 /* FOOTER */
@@ -184,7 +185,7 @@ html, body {
     color: white;   
     font-size: 14px;
     margin-left: 0;
-    margin-top: 20px;
+    margin-top: 23px;
     padding-top: 2.5%;
     }
     
