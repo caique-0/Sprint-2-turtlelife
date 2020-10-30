@@ -25,7 +25,7 @@
     font-size: 25px;
     color: white;
     margin-top: -53px;
-    margin-left: 595px;
+    margin-left: 730px;
 }
 
 #menu {
@@ -151,6 +151,10 @@ label #menu:hover{
     display: none;
 }
 
+.dashboard-container{
+    margin: 0 0 0 240px;
+}
+
 .dashboard-area img {
     height: 100px;
     cursor: pointer;
@@ -160,7 +164,7 @@ label #menu:hover{
     text-align: center;
     width: 300px;
     float: left;
-    margin-left: 130px;
+    margin-left: 80px;
     margin-top: 100px;
 }
 
