@@ -192,4 +192,13 @@ label #menu:hover{
     height: 25px;
     width: 700px;
 }
-
+.btn_salvar {
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #535993, #1ec1c4);
+    margin: 41px 0px 45px 685px;
+}
