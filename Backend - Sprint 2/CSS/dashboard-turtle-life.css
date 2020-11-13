@@ -88,10 +88,11 @@
 }
 
 .ajustes {
-    float: right;
-    margin-right: 90px;
-    width: 100px;
-    justify-content: flex-end;
+        float: right;
+        margin-right: 90px;
+        margin-top: 21px;
+        width: 100px;
+        justify-content: flex-end;
 }
 
 .menu-sidebar a{

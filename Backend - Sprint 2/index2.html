@@ -144,24 +144,24 @@
 				chart.update();
 			});
 
-			if (average >= 36) {
+			if (obj.average >= 36) {
 				average.style.color = 'red';
 				alert(`Temperatura crítica! Está ${average.toFixed(2)} favor controlar a temperatura`)
-			} else if (average >= 35 && average < 36) {
+			} else if (obj.average >= 35 && average < 36) {
 				average.style.color = 'darkorange';
-			} else if (average >= 34 && average < 35) {
+			} else if (obj.average >= 34 && obj.average < 35) {
 				average.style.color = 'darkyellow';
-			} else if (average >= 33 && average < 34) {
+			} else if (obj.average >= 33 && obj.average < 34) {
 				average.style.color = 'green';
-			} else if (average >= 32 && average < 33) {
+			} else if (obj.average >= 32 && obj.average < 33) {
 				average.style.color = 'darkgreen';
-			} else if (average >= 31 && average < 32) {
+			} else if (obj.average >= 31 && obj.average < 32) {
 				average.style.color = 'lightgreen';
-			} else if (average >= 30 && average < 31) {
+			} else if (obj.average >= 30 && obj.average < 31) {
 				average.style.color = 'yellow';
-			} else if (average >= 29 && average < 30) {
+			} else if (obj.average >= 29 && obj.average < 30) {
 				average.style.color = 'orange';
-			} else if (average >= 28 && average < 29) {
+			} else if (obj.average >= 28 && obj.average < 29) {
 				average.style.color = 'darkblue';
 			}
 

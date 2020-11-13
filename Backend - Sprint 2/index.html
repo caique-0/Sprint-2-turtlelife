@@ -128,28 +128,28 @@
 				}
 
 				chart.data.labels.push(this.time++);
-				chart.data.datasets[0].data.push(parseFloat(data));
+				chart.data.datasets[0].data.push(parseFloat(data - 2));
 				chart.update();
 			});
 
-			if (average >= 29) {
+			if (obj.average >= 29) {
 				average.style.color = 'red';
 				alert(`Temperatura crítica! Está ${average.toFixed(2)} favor controlar a temperatura`)
-			} else if (average >= 28 && average < 29) {
+			} else if (obj.average >= 28 && obj.average < 29) {
 				average.style.color = 'darkorange';
-			} else if (average >= 27 && average < 28) {
+			} else if (obj.average >= 27 && obj.average < 28) {
 				average.style.color = 'darkyellow';
-			} else if (average >= 26 && average < 27) {
+			} else if (obj.average >= 26 && obj.average < 27) {
 				average.style.color = 'green';
-			} else if (average >= 25 && average < 26) {
+			} else if (obj.average >= 25 && obj.average < 26) {
 				average.style.color = 'darkgreen';
-			} else if (average >= 24 && average < 25) {
+			} else if (obj.average >= 24 && obj.average < 25) {
 				average.style.color = 'lightgreen';
-			} else if (average >= 23 && average < 24) {
+			} else if (obj.average >= 23 && obj.average < 24) {
 				average.style.color = 'yellow';
-			} else if (average >= 22 && average < 23) {
+			} else if (obj.average >= 22 && obj.average < 23) {
 				average.style.color = 'orange';
-			} else if (average >= 21 && average < 22) {
+			} else if (obj.average >= 21 && obj.average < 22) {
 				average.style.color = 'darkblue';
 			}
 
